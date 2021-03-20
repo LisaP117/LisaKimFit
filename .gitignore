@@ -3,7 +3,15 @@ node_modules
 
 # production
 dist
+reports
 .env
+.cache
+
+# templates
+src/site/_includes/_partials/preload-styles.njk
+src/site/_includes/_partials/scripts.njk
+src/site/_includes/_partials/styles.njk
+cache-manifest.json
 
 # misc
 [Tt]humbs.db

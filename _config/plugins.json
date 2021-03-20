@@ -1,0 +1,57 @@
+{
+  "cssnano": {
+    "autoprefixer": true,
+    "calc": true,
+    "colormin": true,
+    "convertValues": true,
+    "core": true,
+    "discardComments": {
+      "removeAll": false
+    },
+    "discardDuplicates": true,
+    "discardEmpty": true,
+    "filterOptimiser": false,
+    "filterPlugins": false,
+    "functionOptimiser": false,
+    "mergeIdents": false,
+    "mergeLonghand": true,
+    "mergeRules": false,
+    "minifyFontValues": true,
+    "minifyGradients": true,
+    "minifySelectors": false,
+    "normalizeCharset": false,
+    "normalizeUrl": true,
+    "orderedValues": true,
+    "reduceIdents": false,
+    "reduceTransforms": true,
+    "styleCache": false,
+    "svgo": false,
+    "uniqueSelectors": true,
+    "zindex": false
+  },
+  "uglify": {
+    "terserOptions": {
+      "module": true,
+      "compress": {
+        "sequences": true,
+        "properties": false,
+        "dead_code": false,
+        "drop_debugger": false,
+        "unsafe": false,
+        "conditionals": true,
+        "comparisons": true,
+        "evaluate": true,
+        "booleans": false,
+        "loops": false,
+        "unused": false,
+        "hoist_funs": false,
+        "hoist_vars": false,
+        "if_return": false,
+        "join_vars": true,
+        "side_effects": false,
+        "warnings": false,
+        "global_defs": {}
+      }
+    }
+  }
+}
