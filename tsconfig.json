@@ -29,8 +29,6 @@
     "src"
   ],
   "exclude": [
-    "src/utils/**/*.js",
-    "src/site/_data/*.js",
     "node_modules"
   ]
 }
