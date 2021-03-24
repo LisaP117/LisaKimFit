@@ -81,8 +81,8 @@ function Bundle() {
 
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'js/[name].bundle.js?cb=[chunkhash]',
-      chunkFilename: 'js/[id].chunk.js?cb=[chunkhash]',
+      filename: 'css/[name].bundle.js?cb=[chunkhash]',
+      chunkFilename: 'css/[id].chunk.js?cb=[chunkhash]',
       publicPath: '/'
     },
 
@@ -96,7 +96,7 @@ function Bundle() {
           exclude: /node_modules/
         },
         {
-          test: /\.s[ac]ss$/i,
+          test: /\.scss$/i,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,

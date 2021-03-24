@@ -1,7 +1,25 @@
 {
-  "url": "https://lisakimfit.co.uk",
-  "name": "Lisa KimFit",
-  "email": "",
+  "url": "https://lisakimfit.com",
+  "name": "Lisa Kim Fit",
+  "email": "helpme@lisakimfit.com",
   "instagramUrl": "https://www.instagram.com/lisakimfit/",
-  "githubRepo": "https://github.com/LisaP117/LisaKimFit"
+  "githubRepo": "https://github.com/LisaP117/LisaKimFit",
+	"navigation": [
+		{
+			"title": "About",
+			"ref": "about"
+		},
+		{
+			"title": "Mission",
+			"ref": "mission"
+		},
+		{
+			"title": "Services",
+			"ref": "services"
+		},
+		{
+			"title": "Contact",
+			"ref": "contact"
+		}
+	]
 }

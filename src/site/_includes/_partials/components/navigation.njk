@@ -1,0 +1,16 @@
+<div class="navigation__wrapper">
+	<nav class="navigation__bar">
+		<ul class="navigation__list">
+			{% for item in settings.navigation %}
+				<li class="navigation__listItem" data-link="{{item.ref}}"><span>{{item.title}}</span></li>
+			{% endfor %}
+		</ul>
+		<ul class="navigation__list navigation__list--socials">
+			<li class="navigation__listItem"><a href="http://www.instagram.com/lisakimfit" title="Instagram lisa kim fit"></a></li>
+			<li class="navigation__listItem"><a href="http://www.facebook.com/lisakimfit" title="Facebook lisa kim fit"></a></li>
+		</ul>
+		<div class="burger-menu__iconWrap">
+			<span class="burger-menu__icon" data="burgermenu"></span>
+		</div>
+	</nav>
+</div>
