@@ -59,15 +59,15 @@ header {
 .header-logo {
 	width: 210px;
 
-	&__link {
+	// &__link {
 
-	}
+	// }
 
-	&__icon {
-		image {
-			y: 19px;
-		}
-	}
+	// &__icon {
+	// 	image {
+	// 		y: 19px;
+	// 	}
+	// }
 
 }
 
@@ -79,23 +79,23 @@ header {
 	}
 
 	&__bar {
-		@include flexbox(column, space-evenly);	
+		@include flexbox(column, space-evenly, center);	
 	}
 
 	&__list {
 		@extend %listoverride;
-    @include flexbox(row, space-evenly);
+    @include flexbox(row, space-evenly, center);
 
-		&--socials {
-			.navigation__listItem {
+		// &--socials {
+		// 	.navigation__listItem {
 
-			}
-		}
+		// 	}
+		// }
 	}
 
-	&__listItiem {
+	// &__listItiem {
 
-	}
+	// }
 }
 
 // Mobile navigation
