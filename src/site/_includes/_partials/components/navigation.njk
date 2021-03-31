@@ -1,16 +1,29 @@
 <div class="navigation__wrapper">
 	<nav class="navigation__bar">
-		<ul class="navigation__list">
+		<ul class="navigation__list navigation__list--desktop">
 			{% for item in settings.navigation %}
 				<li class="navigation__listItem" data-link="{{item.ref}}"><span>{{item.title}}</span></li>
 			{% endfor %}
 		</ul>
 		<ul class="navigation__list navigation__list--socials">
-			<li class="navigation__listItem"><a href="http://www.instagram.com/lisakimfit" title="Instagram lisa kim fit"></a></li>
-			<li class="navigation__listItem"><a href="http://www.facebook.com/lisakimfit" title="Facebook lisa kim fit"></a></li>
+			<li class="navigation__listItem">
+				<a href="http://www.instagram.com/lisakimfit" title="Instagram lisa kim fit">
+					<i class="fab fa-instagram"></i>
+				</a>
+			</li>
+			<li class="navigation__listItem">
+				<a href="http://www.facebook.com/lisakimfit" title="Facebook lisa kim fit">
+					<i class="fab fa-facebook"></i>
+				</a>
+			</li>
 		</ul>
-		<div class="burger-menu__iconWrap">
-			<span class="burger-menu__icon" data="burgermenu"></span>
+		<div class="mobile-menu__iconWrap">
+			<span class="mobile-menu__iconOpen show" data-menu-button="open">
+				<i class="fas fa-bars"></i>
+			</span>
+			<span class="mobile-menu__iconClose hide" data-menu-button="close">
+				<i class="fas fa-times"></i>
+			</span>
 		</div>
 	</nav>
 </div>
