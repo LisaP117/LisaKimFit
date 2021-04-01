@@ -1,9 +1,10 @@
-$font-stack: Helvetica, sans-serif;
+$font-stack: "Questrial", sans-serif;;
 $title-font: Impact;
 $primary-purple: #392033;
 $primary-coral: #FD6051;
-$white: #FFFFFF;
+$white: #FCFCFC;
 $black: #000000;
+$altBg: #f8f9fa;
 $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 
 *,
@@ -19,17 +20,32 @@ html {
 body {
 	font-family: $font-stack;
   margin: 0;
+	line-height: 24px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-
-h1,h2,h3,blockquote {
+h1,h2,h3 {
 	font-family: $title-font;
+	color: $primary-purple;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 40px;
+	padding: 0;
 }
 
 a { 
 	display: block; 
+}
+
+blockquote {
+	font-family: "Lobster", cursive;
+	font-size: 24px;
+	text-align: center;
+	padding: 20px;
+	margin: 0;
 }
 
 @mixin flexbox($direction, $justify, $align) {
@@ -57,16 +73,29 @@ header {
 	top: 0;
 	background: $primary-purple;
 	box-shadow: 0 1px 3px rgb(0 0 0 / 25%);	
+	z-index: 2;
 }
 
 .container {
 	@extend %layout;
 	margin: 0 auto;
-	padding: 0;
+	padding: 15px 0;
 	@include flexbox(row, space-between, center);	
 }
 
 .hide { display: none; }
+
+i.fab,
+i.fas {
+	font-size: 28px;
+	color: #fff;
+	position: relative;
+	top: -2px;
+}
+
+i.fas.fa-times {
+	top: 0px;
+}
 
 // HEADER
 
@@ -77,6 +106,7 @@ header {
 // NAVIGATION
 .mobile-menu {
 	&__iconWrap {
+		width: 25px;
 		display: block;
 	}
 }
@@ -93,7 +123,7 @@ header {
 	&__list {
 		@extend %listoverride;
 		@include flexbox(row, flex-start, center);
-		font-size: 14px;
+		font-size: 16px;
 		font-weight: bold;
 		color: $white;
 
@@ -107,8 +137,9 @@ header {
 	}
 
 	&__listItem {
-		padding: 5px;
-		margin: 0 5px;
+		padding: 10px 5px;
+		margin: 0 0 10px;
+		cursor: pointer;
 	}
 
 	&__mobile {
@@ -121,6 +152,7 @@ header {
     padding: 10px 0 20px;
 		background: $primary-purple;
 		box-shadow: -1px 4px 2px rgb(0 0 0 / 25%);
+		transition: right 0.5s ease;
 
 		&--closed {
 			right: -190px;
@@ -142,42 +174,111 @@ header {
 			}
 		}
 
+		&__listItem {
+			padding: 5px;
+			margin: 0 5px;
+		}
+
 		&__mobile {
 			display: none;
 		}
 	}
 
-	.burger-menu {
+	.mobile-menu {
 		&__iconWrap {
 			display: none;
 		}
 	}
 }
 
-i.fab,
-i.fas {
-	font-size: 28px;
-	color: #fff;
-	position: relative;
-	top: -2px;
-}
-
-i.fas.fa-times {
-	top: 0px;
-}
+// Main content 
 
 .main-content {
-	@extend %layout;
-	margin: 94px auto 0;
-	padding: 0;
+	margin: 94px 0;
+}
+
+.posts {
+	padding: 20px 0 0;
+
+	&:nth-child(odd) {
+		background: $white;
+
+		.divider {
+			-webkit-transform: skewY(2deg);
+			-moz-transform: skewY(2deg);
+			-ms-transform: skewY(2deg);
+			-o-transform: skewY(2deg);
+			transform: skewY(2deg);
+			background: $white;
+		}
+
+	}
+
+	&:nth-child(even){
+		background: $altBg;
+
+		.divider {
+			-webkit-transform: skewY(-2deg);
+			-moz-transform: skewY(-2deg);
+			-ms-transform: skewY(-2deg);
+			-o-transform: skewY(-2deg);
+			transform: skewY(-2deg);
+			background: $altBg;
+		}
+
+	}
 }
 
 // section block
 
-// Text block
+.section {
+	padding: 20px;
+	margin: 0 0 20px;
+	&__column {
+		&:nth-child(1) {
+			margin-bottom: 60px;
+		}
+	}
+}
 
-// Image block
+@media screen and (min-width: 900px) {
+	h2 {
+		font-size: 46px;
+		line-height: 50px;
+		padding: 0 160px 0 0;
+	}
 
-// Quote blocks
+	.section {
+		max-width: 1080px;
+		width: 90%;
+		position: relative;
+		margin: 40px auto 20px;
+		padding: 0;
 
-// Forms
+		p {
+			padding: 0 160px 0 0;
+		}
+
+		&__row {
+			@include flexbox(row, space-evenly, flex-start);
+			overflow: hidden;
+		}
+
+		&__column {
+			position: relative;
+			width: 50%;
+			&--reverse {
+				order: -1;
+			}
+		}
+	}
+}
+
+.divider {
+	display: block;
+	width: 100%;
+	height: 50px;
+	position: relative;
+	top: 25px;
+	box-shadow: 0 2px 1px 0px rgb(0 0 0 / 5%);
+}

@@ -49,6 +49,6 @@ observe((element: HTMLElement) => {
 	import(/* webpackChunkName: "navigation" */ 'Src/scripts/mobilenavigation')
 		.then(module => initModule(module, element))
 		.catch(err => console.error(`Error in: Navigation - ${err}`));
-}, document.querySelectorAll('[data-component="navigation"]'));
+}, document.querySelectorAll('[data-component="header"]'));
 
 export { };

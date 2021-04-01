@@ -1,51 +1,21 @@
-<section id="about" class="section">
-	<div class="section__row">
-		<div class="section__column">
-		</div>
+{% for section in settings.sections %}
+<div class="posts">
+	<section id="{{ section.id }}" class="section" aria-labelledby="{{ section.id }}">
+		<div class="section__row">
+			<div class="section__column">
+				<h2>{{ section.title }}</h2>
+				<p>{{ section.body }}</p>
+			</div>
 
-		<div class="section__column">
+			<div class="section__column {{ 'section__column--reverse' if 'reverse' in section.imagePosition }}">
+				<img src="{{section.image}}" alt="{{section.title}}" width="536px" />
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+	<blockquote>
+		<p>{{ section.quote }}</p>
+	</blockquote>
+	<div class="divider"></div>
+</div>
+{% endfor %}
 
-<section id="mission" class="section">
-	<div class="section__row">
-		<div class="section__column">
-		</div>
-
-		<div class="section__column">
-		</div>
-	</div>
-</section>
-
-<section id="service" class="section">
-	<div class="section__row">
-		<div class="section__column">
-			<h2>Personal Training</h2>
-		</div>
-
-		<div class="section__column">
-			<h2>Undiscovered</h2>
-		</div>
-	</div>
-
-	<div class="section__row">
-		<div class="section__column">
-			<h2>Online Training</h2>
-		</div>
-
-		<div class="section__column">
-			
-		</div>
-	</div>
-</section>
-
-<section id="contact" class="section">
-	<div class="section__row">
-		<div class="section__column">
-		</div>
-
-		<div class="section__column">
-		</div>
-	</div>
-</section>
