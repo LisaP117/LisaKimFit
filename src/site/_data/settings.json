@@ -45,6 +45,18 @@
 			"id": "services",
 			"title": "Personal Training",
 			"body": "In person training to help you on your way in your fitness journey. Whether that be just starting out or someone wanting to build on their strength. All sessions are fully tailored to help you achieve your goal. I ensure we set performance goals instead of physical goals, you'll find the journey is smoother.",
+			"list": [
+				{
+					"item": "1 session : £30. Not sure, try out 1 session."
+				},
+				{
+					"item": "4 sessions : £100, Happy to commit to one a week."
+				},
+				{
+					"item": "8 sessions : £200. Two sessions a week, let's make change."
+				}
+			],
+			"disclaimer": "* All session to take within a month. Cancellations must be notified 24-48hrs prior to session otherwise you will be charged.",
 			"imagePosition": "none",
 			"image": "",
 			"imageTitle": "",

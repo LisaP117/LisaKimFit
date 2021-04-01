@@ -5,6 +5,18 @@
 			<div class="section__column">
 				<h2>{{ section.title }}</h2>
 				<p>{{ section.body }}</p>
+
+				{% if section.list %}
+					<ul class="section__list">
+						{% for item in section.list %}
+							<li>{{ item.item }}</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+
+				{% if section.disclaimer %}
+					<p><small>{{ section.disclaimer }}</small></p>
+				{% endif %}
 			</div>
 
 			<div class="section__column {{ 'section__column--reverse' if 'reverse' in section.imagePosition }}">
