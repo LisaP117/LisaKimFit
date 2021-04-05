@@ -33,7 +33,7 @@ h1,h2,h3 {
 h2 {
 	font-size: 36px;
 	line-height: 40px;
-	padding: 0;
+	padding: 0 20px 0 0;
 }
 
 a { 
@@ -50,22 +50,13 @@ a {
 i.fab,
 i.fas {
 	font-size: 28px;
-	color: #fff;
+	color: $white;
 	position: relative;
 	top: -2px;
 }
 
 i.fas.fa-times {
 	top: 0px;
-}
-
-blockquote {
-	font-family: "Lobster", cursive;
-	font-size: 24px;
-	text-align: center;
-	color: #FD6051;
-	padding: 20px;
-	margin: 0;
 }
 
 @mixin flexbox($direction, $justify, $align) {
@@ -98,6 +89,27 @@ blockquote {
 	position: relative;
 }
 
+blockquote {
+	@include flexbox(column, center, center);
+	font-family: "Lobster", cursive;
+	font-size: 24px;
+	text-align: center;
+	color: $primary-coral;
+	padding: 20px;
+	margin: 0;
+
+	.quote {
+		@include flexbox(row, center, center);
+		p {
+			padding: 0px 15px;
+		}
+
+		i.fas {
+			color: $primary-coral;
+		}
+	}
+}
+
 header {
 	width: 100%;
 	position: fixed;
@@ -117,14 +129,16 @@ header {
 // HEADER
 
 .header-logo {
-	width: 210px;
+	width: 150px;
 }
 
 // NAVIGATION
 .mobile-menu {
 	&__iconWrap {
 		width: 25px;
-		display: block;
+    display: block;
+    padding: 10px 0;
+    margin: 0 0 10px 0;
 	}
 }
 
@@ -145,7 +159,7 @@ header {
 		color: $white;
 
 		&--socials {
-			margin: 0 10px 0 20px;
+			margin: 0 5px 0 0;
 		}
 
 		&--desktop {
@@ -163,7 +177,7 @@ header {
     width: 150px;
     position: fixed;
     right: 0;
-    top: 79px;
+    top: 112px;
     padding: 10px 0 20px;
 		background: $primary-purple;
 		box-shadow: -1px 4px 2px rgb(0 0 0 / 25%);
@@ -253,7 +267,10 @@ header {
 
 .section {
 	padding: 20px;
-	margin: 0 0 20px;
+	margin: 0;
+	&:last-child {
+		padding: 20px 20px 40px;
+	}
 	&__column {
 		&:nth-child(1) {
 			margin-bottom: 60px;
@@ -323,7 +340,7 @@ header {
 			padding: 10px;
 			border-radius: 3px;
 			border: 0px solid transparent;
-			width: 50%;
+			width: 100%;
 
 			&::placeholder {
 				color: $primary-purple;
@@ -341,6 +358,7 @@ header {
 			line-height: 24px;
 			padding: 10px;
 			border-radius: 3px;
+			width: 100%;
 
 			&:focus {
 				outline: none;
@@ -361,25 +379,47 @@ header {
 	}
 }
 
+@media screen and (min-width: 900px) {
+	.form {
+		&__field {
+			input {
+				width: 50%;
+			}
+		}
+	}
+}
+
 // footer
 .footer {
 	background: $primary-purple;
+	.container {
+		@include flexbox(column, flex-start, baseline);
+	}
 
 	&__list {
-		@extend %listoverride;
 		@include flexbox(row, flex-start, center);
-		font-size: 16px;
-		font-weight: bold;
-		color: $white;
+		@extend %listoverride;
 	}
 
 	&__listItem {
 		@extend %listitem;
-		padding: 5px;
-		margin: 0 5px;
+		color: $white;
 	}
 
 	p {
 		color: $white;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.footer {
+		.container {
+			@include flexbox(row, space-between, center);
+		}
+
+		&__list {
+			@include flexbox(row, space-evenly, center);
+		}
+
 	}
 }
