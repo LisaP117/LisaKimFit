@@ -2,7 +2,7 @@ $font-stack: "Questrial", sans-serif;;
 $title-font: Impact;
 $primary-purple: #392033;
 $primary-coral: #FD6051;
-$white: #FCFCFC;
+$white: #FFFFFF;
 $black: #000000;
 $altBg: #f8f9fa;
 $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
@@ -40,10 +40,30 @@ a {
 	display: block; 
 }
 
+.disclaimer {
+	font-size: 14px;
+	line-height: 1;
+}
+
+.hide { display: none; }
+
+i.fab,
+i.fas {
+	font-size: 28px;
+	color: #fff;
+	position: relative;
+	top: -2px;
+}
+
+i.fas.fa-times {
+	top: 0px;
+}
+
 blockquote {
 	font-family: "Lobster", cursive;
 	font-size: 24px;
 	text-align: center;
+	color: #FD6051;
 	padding: 20px;
 	margin: 0;
 }
@@ -59,6 +79,17 @@ blockquote {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+}
+
+%listitem {
+	padding: 10px 5px;
+	margin: 0 0 10px;
+	cursor: pointer;
+	border-bottom: 1px solid transparent;
+	&:hover {
+		transition: border-color 1s ease;
+		border-color: $white;
+	}
 }
 
 %layout {
@@ -81,20 +112,6 @@ header {
 	margin: 0 auto;
 	padding: 15px 0;
 	@include flexbox(row, space-between, center);	
-}
-
-.hide { display: none; }
-
-i.fab,
-i.fas {
-	font-size: 28px;
-	color: #fff;
-	position: relative;
-	top: -2px;
-}
-
-i.fas.fa-times {
-	top: 0px;
 }
 
 // HEADER
@@ -137,9 +154,7 @@ i.fas.fa-times {
 	}
 
 	&__listItem {
-		padding: 10px 5px;
-		margin: 0 0 10px;
-		cursor: pointer;
+		@extend %listitem;
 	}
 
 	&__mobile {
@@ -192,17 +207,16 @@ i.fas.fa-times {
 }
 
 // Main content 
-
 .main-content {
-	margin: 94px 0;
+	margin: 94px 0 0;
 }
 
+// posts and sections
 .posts {
 	padding: 20px 0 0;
 
 	&:nth-child(odd) {
 		background: $white;
-
 		.divider {
 			-webkit-transform: skewY(2deg);
 			-moz-transform: skewY(2deg);
@@ -211,12 +225,10 @@ i.fas.fa-times {
 			transform: skewY(2deg);
 			background: $white;
 		}
-
 	}
 
 	&:nth-child(even){
 		background: $altBg;
-
 		.divider {
 			-webkit-transform: skewY(-2deg);
 			-moz-transform: skewY(-2deg);
@@ -225,7 +237,15 @@ i.fas.fa-times {
 			transform: skewY(-2deg);
 			background: $altBg;
 		}
+	}
+}
 
+@media screen and (min-width: 900px) {
+	.posts:last-child {
+		padding: 75px 0;
+		.section {
+			margin-bottom: 0;
+		}
 	}
 }
 
@@ -245,7 +265,7 @@ i.fas.fa-times {
 	h2 {
 		font-size: 46px;
 		line-height: 50px;
-		padding: 0 160px 0 0;
+		padding: 0 190px 0 0;
 	}
 
 	.section {
@@ -281,4 +301,85 @@ i.fas.fa-times {
 	position: relative;
 	top: 25px;
 	box-shadow: 0 2px 1px 0px rgb(0 0 0 / 5%);
+}
+
+// form
+.form {
+	padding: 10px 3px;
+	background: $primary-purple;
+	border-radius: 5px;
+
+	&__field {
+		@include flexbox(column, flex-start, flex-start);
+		border: 0px solid transparent;
+		position: relative;
+
+		label {
+			color: $white;
+			margin-bottom: 10px;
+		}
+
+		input {
+			padding: 10px;
+			border-radius: 3px;
+			border: 0px solid transparent;
+			width: 50%;
+
+			&::placeholder {
+				color: $primary-purple;
+				opacity: 0.5;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		textarea {
+			font-family: $font-stack;
+			font-size: 14px;
+			line-height: 24px;
+			padding: 10px;
+			border-radius: 3px;
+
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&__submit {
+			background: $primary-coral;
+			color: $white;
+			font-weight: bold;
+			text-transform: uppercase;
+			transition: background 0.5s ease;
+			cursor: pointer;
+			&:hover {
+				background: darken($primary-coral, 2%);
+			}
+		}
+	}
+}
+
+// footer
+.footer {
+	background: $primary-purple;
+
+	&__list {
+		@extend %listoverride;
+		@include flexbox(row, flex-start, center);
+		font-size: 16px;
+		font-weight: bold;
+		color: $white;
+	}
+
+	&__listItem {
+		@extend %listitem;
+		padding: 5px;
+		margin: 0 5px;
+	}
+
+	p {
+		color: $white;
+	}
 }

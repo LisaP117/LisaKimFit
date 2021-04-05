@@ -1,0 +1,29 @@
+{% for contact in settings.contact %}
+<div class="posts">
+	<section id="{{ contact.id }}" class="section" aria-labelledby="{{ contact.id }}">
+		<div class="section__row">
+			<div class="section__column">
+				<h2>{{ contact.title }}</h2>
+				<p>{{ contact.body }}</p>
+			</div>
+			<div class="section__column">
+				<form class="form" action"" method="post">
+					{% for field in contact.fields %}
+						<fieldset class="form__field">
+								<label for="{{field.id}}">{{field.name}}</label>
+								{% if 'textarea' in field.type %}
+									<textarea name="{{field.name}}" id="{{field.id}}" rows="5" cols="60" placeholder="{{field.placeholder}}"></textarea>
+								{% else %}
+									<input name="{{field.name}}" type="{{field.type}}" id="{{field.id}}" placeholder="{{field.placeholder}}" {{ 'required' if 'true' in field.isRequired }} noError />
+								{% endif %}
+						</fieldset>
+					{% endfor %}
+					<fieldset class="form__field">
+						<input class="form__field__submit" type="button" value="Send">
+					</fieldset>	
+				</form>
+			</div>
+		</div>
+	</section>
+</div>
+{% endfor %}

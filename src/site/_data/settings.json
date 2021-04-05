@@ -25,7 +25,7 @@
 	"sections" : [
 		{
 			"id": "About",
-			"title": "Let's build confidence and a can do attitude",
+			"title": "Let's build your confidence & a can do attitude",
 			"body": "I want to help you build confidence, get over hurdles, reach your goals and lift some weight because you can. You are able. I have been lifting for over 6 years and it is such an incredible feeling. The strength our bodies have is suprising and we need to love and respect them more, they are our homes after all.",
 			"imagePosition": "default",
 			"image": "",
@@ -83,13 +83,37 @@
 	],
 	"contact" : [
 		{
-			"id": "Contact",
+			"id": "ContactForm",
 			"title": "Contact",
-			"body": "If you have any questions or just need to get in touch for more information then do get in touch.",
+			"body": "If you have any questions or just need to get in touch for more information, please fill out the form and we'll get back to you within 24-48hrs.",
 			"fields": [
 				{
-					"name": "",
-					"inputType": ""
+					"id": "name",
+					"name": "Full Name",
+					"type": "text",
+					"placeholder": "Full Name",
+					"isRequired": "true"
+				},
+				{
+					"id": "email",
+					"name": "Email Address",
+					"type": "email",
+					"placeholder": "Email Address",
+					"isRequired": "true"
+				},
+				{
+					"id": "phone",
+					"name": "Phone Number",
+					"type": "number",
+					"placeholder": "Phone Number",
+					"isRequired": "true"
+				},
+				{
+					"id": "message",
+					"name": "Your Message",
+					"type": "textarea",
+					"placeholder": "I would like more information on [ choose service ] OR I would like a callback to discuss, please.",
+					"isRequired": "true"
 				}
 			]
 		}
