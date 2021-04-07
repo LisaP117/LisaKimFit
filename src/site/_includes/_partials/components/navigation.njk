@@ -2,7 +2,7 @@
 	<nav class="navigation__bar">
 		<ul class="navigation__list navigation__list--desktop">
 			{% for item in settings.navigation %}
-				<li class="navigation__listItem" data-link="{{item.ref}}"><span>{{item.title}}</span></li>
+				<li class="navigation__listItem" data-link="{{item.ref}}">{{item.title}}</li>
 			{% endfor %}
 		</ul>
 		<ul class="navigation__list navigation__list--socials">

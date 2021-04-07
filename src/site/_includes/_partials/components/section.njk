@@ -20,7 +20,10 @@
 			</div>
 
 			<div class="section__column {{ 'section__column--reverse' if 'reverse' in section.imagePosition }}">
-				<img src="{{section.image}}" alt="{{section.title}}" width="536px" />
+				<img srcset="{{section.image2}} 480w,{{section.image1}} 800w"
+     					sizes="(max-width: 600px) 480px, 800px"
+     					src="{{section.image1}}"
+     					alt="{{section.imageTitle}}">
 			</div>
 		</div>
 	</section>

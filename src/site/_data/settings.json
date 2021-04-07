@@ -24,21 +24,23 @@
 	],
 	"sections" : [
 		{
-			"id": "About",
+			"id": "about",
 			"title": "Let's build your confidence & a can do attitude",
 			"body": "I want to help you build confidence, get over hurdles, reach your goals and lift some weight because you can. You are able. I have been lifting for over 6 years and it is such an incredible feeling. The strength our bodies have is suprising and we need to love and respect them more, they are our homes after all.",
 			"imagePosition": "default",
-			"image": "",
-			"imageTitle": "Lisa single arm kettlebell press",
+			"image1": "/images/LisaKimFit-480w.jpg",
+			"image2": "/images/LisaKimFit-800w.jpg",
+			"imageTitle": "Lisa Kim Fit",
 			"quote": "It's a continuous journey with endless achievements. Reaching your goal is just the start."
 		},
 		{
-			"id": "Mission",
+			"id": "mission",
 			"title": "My Mission",
 			"body": "I am on a mission to get as many people to fall in love with resistance training and movement. I want you to see the value that training adds to your life. For far too long it has been seen as chore. Since when is looking after yourself a chore? It should be a priority. The mental and physical benefits are huge and I want everyone to experience them. It's never too late, please don't say that. You are more capable then you could imagine.",
 			"imagePosition": "reverse",
-			"image": "",
-			"imageTitle": "",
+			"image1": "/images/LisaKimFitSledPush-480w.jpg",
+			"image2": "/images/LisaKimFitSledPush-800w.jpg",
+			"imageTitle": "Lisa Kim Fit Sled Push",
 			"quote": "To be able to achieve you must hold yourself accountable."
 		},
 		{
@@ -58,7 +60,8 @@
 			],
 			"disclaimer": "* All session to take within a month. Cancellations must be notified 24-48hrs prior to session otherwise you will be charged.",
 			"imagePosition": "none",
-			"image": "",
+			"image1": "",
+			"image2": "",
 			"imageTitle": "",
 			"quote": "You don't have to sacrifice life to be fitter and healthier."
 		},
@@ -67,7 +70,8 @@
 			"title": "Fight for Fit",
 			"body": "Fight for Fit is an online training program that is tailored to suit your needs. You will be amongst a group of people who will get tailored plans, weekly zoom check ins, recipe ideas and a whats app support group. You will be held accountable in this community but, you will win.",
 			"imagePosition": "reverse",
-			"image": "",
+			"image1": "",
+			"image2": "",
 			"imageTitle": "",
 			"quote": "Restriction doesn't belong here, moderation and enjoyment does."
 		},
@@ -76,14 +80,15 @@
 			"title": "Online Training",
 			"body": "Online training is a tailored program adapted to you to allow you to reach your desired goals. You're the kind of person that knows what they're doing in a gym, has the drive and discipline but, just needs help with structuring your training.",
 			"imagePosition": "none",
-			"image": "",
+			"image1": "",
+			"image2": "",
 			"imageTitle": "",
 			"quote": "Motivation comes after doing, consistency becomes discipline, discpline leads to change."
 		}
 	],
 	"contact" : [
 		{
-			"id": "ContactForm",
+			"id": "contact",
 			"title": "Contact",
 			"body": "If you have any questions or just need to get in touch for more information, please fill out the form and we'll get back to you within 24-48hrs.",
 			"fields": [
@@ -113,6 +118,29 @@
 					"name": "Your Message",
 					"type": "textarea",
 					"placeholder": "I would like more information on [ choose service ] OR I would like a callback to discuss, please.",
+					"isRequired": "true"
+				}
+			]
+		}
+	],
+	"newsletter": [
+		{
+			"id": "newsletter",
+			"title": "Sign up to the newsletter",
+			"body": "For all things fitness, training and nutrition hints and tips, recipes and personal experiences you can relate to. Real and raw.",
+			"fields": [
+				{
+					"id": "name",
+					"name": "Full Name",
+					"type": "text",
+					"placeholder": "Full Name",
+					"isRequired": "true"
+				},
+				{
+					"id": "email",
+					"name": "Email Address",
+					"type": "text",
+					"placeholder": "Email Address",
 					"isRequired": "true"
 				}
 			]

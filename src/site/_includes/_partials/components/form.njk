@@ -7,23 +7,31 @@
 				<p>{{ contact.body }}</p>
 			</div>
 			<div class="section__column">
-				<form class="form" action"" method="post">
-					{% for field in contact.fields %}
+				<form class="form" data-component="form" action="" method="post">
+					<div data-fieldset-wrap>
+						<span class="disclaimer"><small>* required field</small></span>
+						{% for field in contact.fields %}
+							<fieldset class="form__field" data-fieldset>
+									<label for="{{field.id}}"><span data-label-text class="noError">{{field.name}}* <i class="far fa-check-circle hide" data-field-complete></i></span> <span class="hide" data-field-error><i class="fas fa-exclamation-circle"></i>Please enter a valid {{field.id}}</span></label>
+									{% if 'textarea' in field.type %}
+										<textarea name="{{field.name}}" id="{{field.id}}" data-input rows="5" placeholder="{{field.placeholder}}"></textarea>
+									{% else %}
+										<input name="{{field.name}}" type="{{field.type}}" id="{{field.id}}" data-input placeholder="{{field.placeholder}}" {{ 'required' if 'true' in field.isRequired }} noError />
+									{% endif %}
+							</fieldset>
+						{% endfor %}
 						<fieldset class="form__field">
-								<label for="{{field.id}}">{{field.name}}</label>
-								{% if 'textarea' in field.type %}
-									<textarea name="{{field.name}}" id="{{field.id}}" rows="5" placeholder="{{field.placeholder}}"></textarea>
-								{% else %}
-									<input name="{{field.name}}" type="{{field.type}}" id="{{field.id}}" placeholder="{{field.placeholder}}" {{ 'required' if 'true' in field.isRequired }} noError />
-								{% endif %}
-						</fieldset>
-					{% endfor %}
-					<fieldset class="form__field">
-						<input class="form__field__submit" type="button" value="Send">
-					</fieldset>	
+							<input class="form__field__submit" data-submit-button type="button" value="Send" disabled>
+						</fieldset>	
+					</div>
+					<div class="form__messages" data-form-submitted style="display: none;">
+						<p data-form-success style="display: none"> Thank you for your message, I'll get back to you soon. Keep an eye on your emails. </p>
+						<p data-form-error style="display: none"> Oops! Something went wrong, please refresh and try again!</p>
+					</div>
 				</form>
 			</div>
 		</div>
 	</section>
+	<div class="divider"></div>
 </div>
 {% endfor %}

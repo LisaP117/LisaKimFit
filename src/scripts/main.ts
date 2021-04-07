@@ -46,9 +46,27 @@ function observe(callback: Function, elements: NodeList) {
 }
 
 observe((element: HTMLElement) => {
-	import(/* webpackChunkName: "navigation" */ 'Src/scripts/mobilenavigation')
+	import(/* webpackChunkName: "mobile slide out menu" */ 'Src/scripts/mobilenavigation')
 		.then(module => initModule(module, element))
 		.catch(err => console.error(`Error in: Navigation - ${err}`));
 }, document.querySelectorAll('[data-component="header"]'));
+
+observe((element: HTMLElement) => {
+	import(/* webpackChunkName: "resize header on scroll" */ 'Src/scripts/resizeHeaderOnScroll')
+		.then(module => initModule(module, element))
+		.catch(err => console.error(`Error in: Header - ${err}`));
+}, document.querySelectorAll('[data-component="header"]'));
+
+observe((element: HTMLElement) => {
+	import(/* webpackChunkName: "scroll to section" */ 'Src/scripts/scrollToSection')
+		.then(module => initModule(module, element))
+		.catch(err => console.error(`Error in: Links - ${err}`));
+}, document.querySelectorAll('li[data-link]'));
+
+observe((element: HTMLElement) => {
+	import(/* webpackChunkName: "form validation" */ 'Src/scripts/formValidation')
+		.then(module => initModule(module, element))
+		.catch(err => console.error(`Error in: Forms - ${err}`));
+}, document.querySelectorAll('[data-component="form"]'));
 
 export { };
