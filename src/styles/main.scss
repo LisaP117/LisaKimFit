@@ -374,6 +374,15 @@ header {
 	}
 }
 
+button[data-contact-button] {
+	@extend %input;
+	@extend %submit;
+	width: auto;
+	&:hover {
+		background: $primary-purple;
+	}
+}
+
 @media screen and (min-width: 900px) {
 	h2 {
 		font-size: 46px;
@@ -601,7 +610,7 @@ header {
 			
 			&__field {
 				margin: 0 20px 0 0;
-				
+
 				&:last-child {margin: 0;}
 
 				&__submit {

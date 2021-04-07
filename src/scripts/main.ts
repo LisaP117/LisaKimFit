@@ -69,4 +69,10 @@ observe((element: HTMLElement) => {
 		.catch(err => console.error(`Error in: Forms - ${err}`));
 }, document.querySelectorAll('[data-component="form"]'));
 
+observe((element: HTMLElement) => {
+	import(/* webpackChunkName: "scroll to form" */ 'Src/scripts/scrollToForm')
+		.then(module => initModule(module, element))
+		.catch(err => console.error(`Error in: Button - ${err}`));
+}, document.querySelectorAll('[data-contact-button]'));
+
 export { };

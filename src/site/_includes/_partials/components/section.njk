@@ -17,6 +17,11 @@
 				{% if section.disclaimer %}
 					<p class="disclaimer"><small>{{ section.disclaimer }}</small></p>
 				{% endif %}
+
+				{% if section.button %}
+					<button type="button" data-contact-button>{{ section.button }}</button>
+				{%  endif %}
+
 			</div>
 
 			<div class="section__column {{ 'section__column--reverse' if 'reverse' in section.imagePosition }}">
