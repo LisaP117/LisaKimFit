@@ -1,5 +1,5 @@
 $font-stack: "Questrial", sans-serif;;
-$title-font: Impact;
+$title-font: "Impact", sans-serif;
 $primary-purple: #392033;
 $primary-coral: #FD6051;
 $white: #FFFFFF;
@@ -80,6 +80,7 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 	text-transform: uppercase;
 	transition: background 0.5s ease;
 	cursor: pointer;
+	-webkit-appearance: none;
 	&:hover {
 		background: darken($primary-coral, 2%);
 	}
