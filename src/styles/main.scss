@@ -115,6 +115,15 @@ h2 {
 	padding: 0 20px 0 0;
 }
 
+
+@media screen and (min-width: 900px) {
+	h2 {
+		font-size: 46px;
+		line-height: 50px;
+		padding: 0 190px 0 0;
+	}
+}
+
 a { 
 	display: block; 
 }
@@ -127,14 +136,16 @@ p > a {
 	display: inline; 
 }
 
-.disclaimer {
-	font-size: 14px;
-	line-height: 1;
-}
-
 i.hide,
 .hide,
 [data-field-complete] { display: none; }
+
+i.fab,
+i.fas {
+	font-size: 28px;
+	color: $white;
+	position: relative;
+}
 
 [data-field-error] {
 	@include flexbox(row, center, center);
@@ -150,13 +161,6 @@ i.hide,
 		margin-right: 10px;
 	}
 
-}
-
-i.fab,
-i.fas {
-	font-size: 28px;
-	color: $white;
-	position: relative;
 }
 
 blockquote {
@@ -180,6 +184,11 @@ blockquote {
 	}
 }
 
+.disclaimer {
+	font-size: 14px;
+	line-height: 1;
+}
+
 header {
 	width: 100%;
 	position: fixed;
@@ -187,6 +196,18 @@ header {
 	background: $primary-purple;
 	box-shadow: 0 1px 3px rgb(0 0 0 / 25%);	
 	z-index: 2;
+}
+
+.container {
+	@extend %layout;
+	margin: 0 auto;
+	height: 112px;
+	@include flexbox(row, space-between, center);
+	transition: height 0.5s ease;
+}
+
+.main-content {
+	margin: 94px 0 0;
 }
 
 .header-logo__icon {
@@ -207,22 +228,7 @@ header {
 	}
 }
 
-.container {
-	@extend %layout;
-	margin: 0 auto;
-	height: 112px;
-	@include flexbox(row, space-between, center);
-	transition: height 0.5s ease;
-}
-
-// NAVIGATION
-.mobile-menu {
-	&__iconWrap {
-		width: 25px;
-    display: block;
-	}
-}
-
+// Navigation
 .navigation {
 	&__wrapper {
 		width: 80%;
@@ -278,7 +284,6 @@ header {
 	}
 }
 
-// Mobile navigation
 @media screen and (min-width: 900px) {
 	.navigation {
 		&__list {
@@ -312,12 +317,14 @@ header {
 	}
 }
 
-// Main content 
-.main-content {
-	margin: 94px 0 0;
+.mobile-menu {
+	&__iconWrap {
+		width: 25px;
+    display: block;
+	}
 }
 
-// posts and sections
+// posts
 .posts {
 	padding: 20px 0 0;
 
@@ -356,41 +363,39 @@ header {
 }
 
 // section block
-
 .section {
 	padding: 20px;
 	margin: 0;
+
 	&:last-child {
 		padding: 20px 20px 40px;
 	}
+
 	&__column {
+
 		&:nth-child(1) {
 			margin-bottom: 60px;
 		}
+
 		img {
 			display: block;
 			margin: 0 auto;
 			border-radius: 8px;
 		}
-	}
-}
 
-button[data-contact-button] {
-	@extend %input;
-	@extend %submit;
-	width: auto;
-	&:hover {
-		background: $primary-purple;
+		button[data-contact-button] {
+			@extend %input;
+			@extend %submit;
+			width: auto;
+			&:hover {
+				background: $primary-purple;
+			}
+		}
+
 	}
 }
 
 @media screen and (min-width: 900px) {
-	h2 {
-		font-size: 46px;
-		line-height: 50px;
-		padding: 0 190px 0 0;
-	}
-
 	.section {
 		max-width: 1080px;
 		width: 90%;
@@ -429,19 +434,7 @@ button[data-contact-button] {
 	}
 }
 
-@media screen and (min-width: 900px) {
-	.section__column--solo {
-		.form {
-			.fieldsets {
-				@include flexbox(row, flex-start, center);
-			}
-			&__field {
-				width: 33.3%
-			}
-			input { width: 100%; }
-		}
-	}
-}
+// posts divider
 
 .divider {
 	display: block;
@@ -452,7 +445,7 @@ button[data-contact-button] {
 	box-shadow: 0 2px 1px 0px rgb(0 0 0 / 5%);
 }
 
-// form
+// contact form
 .form {
 	padding: 10px 3px;
 	background: $primary-purple;
@@ -511,45 +504,8 @@ button[data-contact-button] {
 	}
 }
 
-// footer
-.footer {
-	background: $primary-purple;
-	.container {
-		@include flexbox(column, flex-start, baseline);
-		height: auto;
-	}
 
-	&__list {
-		@include flexbox(row, flex-start, center);
-		@extend %listoverride;
-	}
-
-	&__listItem {
-		@extend %listitem;
-		color: $white;
-	}
-
-	p {
-		color: $white;
-		padding-left: 10px;
-	}
-}
-
-@media screen and (min-width: 900px) {
-	.footer {
-		.container {
-			@include flexbox(row, space-between, center);
-		}
-
-		&__list {
-			@include flexbox(row, space-evenly, center);
-		}
-
-		p { padding: 0; }
-
-	}
-}
-
+// newsletter
 .newsletter {
 	padding: 55px 20px;
 	@include flexbox(column, space-between, center);
@@ -626,5 +582,44 @@ button[data-contact-button] {
 				}
 			}
 		}
+	}
+}
+
+// footer
+.footer {
+	background: $primary-purple;
+	.container {
+		@include flexbox(column, flex-start, baseline);
+		height: auto;
+	}
+
+	&__list {
+		@include flexbox(row, flex-start, center);
+		@extend %listoverride;
+	}
+
+	&__listItem {
+		@extend %listitem;
+		color: $white;
+	}
+
+	p {
+		color: $white;
+		padding-left: 10px;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.footer {
+		.container {
+			@include flexbox(row, space-between, center);
+		}
+
+		&__list {
+			@include flexbox(row, space-evenly, center);
+		}
+
+		p { padding: 0; }
+
 	}
 }

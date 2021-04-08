@@ -1,6 +1,6 @@
 {% for section in settings.sections %}
 <div class="posts">
-	<section id="{{ section.id }}" class="section {{ 'section__column--alignRight' if 'reverse' in section.imagePosition }}" aria-labelledby="{{ section.id }}">
+	<section id="{{ section.id }}" class="section {% if section.imagePosition  == 'reverse' %}section__column--alignRight{% endif %}" aria-labelledby="{{ section.id }}">
 		<div class="section__row">
 			<div class="section__column">
 				<h2>{{ section.title }}</h2>
@@ -19,27 +19,20 @@
 				{% endif %}
 
 				{% if section.button %}
-					<button type="button" data-contact-button>{{ section.button }}</button>
-				{%  endif %}
-
+					<button type="button" data-contact-button aria-labelledby="button">{{ section.button }}</button>
+				{% endif %}
 			</div>
-
-			<div class="section__column {{ 'section__column--reverse' if 'reverse' in section.imagePosition }}">
+			<div class="section__column {% if section.imagePosition  == 'reverse' %}section__column--reverse{% endif %}">
 				{% if section.image1 %}
 				<img srcset="{{section.image2}} 480w,{{section.image1}} 800w"
-     					sizes="(max-width: 800px) 480px, 800px"
-     					src="{{section.image1}}"
-     					alt="{{section.imageTitle}}">
-				{% endif %}
-				{% if section.video %}
-					<video width="480" autoplay>
-						<source src="{{section.video}}.mp4" type="video/mp4">
-						<source src="{{section.video}}.ogg" type="video/ogg">
-					</video>
+							sizes="(max-width: 800px) 480px, 800px"
+							src="{{section.image1}}"
+							alt="{{section.imageTitle}}">
 				{% endif %}
 			</div>
 		</div>
 	</section>
+{% if section.quote %}
 	<blockquote>
 		<div class="quote">
 			<i class="fas fa-quote-right"></i><p>{{ section.quote }}</p><i class="fas fa-quote-left"></i>
@@ -52,6 +45,7 @@
 			</svg>
 		</div>
 	</blockquote>
+{% endif %}
 	<div class="divider"></div>
 </div>
 {% endfor %}
