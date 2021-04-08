@@ -1,6 +1,7 @@
 {% for newsletter in settings.newsletter %}
 <div class="newsletter">
 	<h2>{{ newsletter.title }}</h2>
+	<p>{{ newsletter.body }}</p>
 	<form class="newsletter__form" data-component="form" action="" method="post">
 		<div data-fieldset-wrap>
 			{% for field in newsletter.fields %}

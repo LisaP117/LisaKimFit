@@ -512,6 +512,7 @@ header {
 
 	&__form {
 		width: 100%;
+		margin-top: 35px;
 		@include flexbox(column, center, center);
 
 		[data-fieldset-wrap] {

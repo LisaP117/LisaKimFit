@@ -30,7 +30,7 @@
 			"imagePosition": "default",
 			"image1": "/images/LisaKimFit-480w.jpg",
 			"image2": "/images/LisaKimFit-800w.jpg",
-			"imageTitle": "Lisa Kim Fit",
+			"imageTitle": "Lisa Kim Fit personal trainer",
 			"quote": "It's a continuous journey with endless achievements. Reaching your goal is just the start."
 		},
 		{
@@ -40,7 +40,7 @@
 			"imagePosition": "reverse",
 			"image1": "/images/LisaKimFitSledPush-480w.jpg",
 			"image2": "/images/LisaKimFitSledPush-800w.jpg",
-			"imageTitle": "Lisa Kim Fit Sled Push",
+			"imageTitle": "Lisa Kim Fit personal trainer sled pushing during a workout",
 			"quote": "To be able to achieve you must hold yourself accountable."
 		},
 		{
@@ -63,7 +63,7 @@
 			"imagePosition": "none",
 			"image1": "/images/jenbacksquat-480w.jpg",
 			"image2": "/images/jenbacksquat-800w.jpg",
-			"imageTitle": "",
+			"imageTitle": "Lisa Kim Fit personal training a client in the gym. Jen is performing a backsquat.",
 			"quote": "You don't have to sacrifice life to be fitter and healthier."
 		},
 		{
@@ -74,7 +74,7 @@
 			"imagePosition": "reverse",
 			"image1": "/images/coming-soon-480w.png",
 			"image2": "/images/coming-soon-800w.png",
-			"imageTitle": "New online community coming soon",
+			"imageTitle": "New online personal training community coming soon",
 			"quote": "Restriction doesn't belong here, moderation and enjoyment does."
 		},
 		{
@@ -85,7 +85,7 @@
 			"imagePosition": "none",
 			"image1": "/images/LisaKimFitProgress-480w.jpg",
 			"image2": "/images/LisaKimFitProgress-800w.jpg",
-			"imageTitle": "Lisa Kim Fit online training progress",
+			"imageTitle": "Lisa Kim Fit personal trainer online training progress picture",
 			"quote": "Motivation comes after doing, consistency becomes discipline, discpline leads to change."
 		}
 	],
@@ -130,7 +130,7 @@
 		{
 			"id": "newsletter",
 			"title": "Sign up to the newsletter",
-			"body": "For all things fitness, training and nutrition hints and tips, recipes and personal experiences you can relate to. Real and raw.",
+			"body": "Real and raw. For all things, training, nutrition hints & tips, recipes and personal experiences you can relate to.",
 			"fields": [
 				{
 					"id": "name",
