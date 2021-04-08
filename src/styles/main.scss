@@ -415,8 +415,15 @@ button[data-contact-button] {
 				order: -1;
 			}
 
-			&--solo {
-				width: 100%;
+			&--alignRight {
+				h2 { padding: 0 0 0 190px; }
+				p { padding: 0 0 0 160px; }
+				p {
+					text-align: right;
+				}
+				.section__column {
+					@include flexbox(column, right, flex-end);
+				}
 			}
 		}
 	}

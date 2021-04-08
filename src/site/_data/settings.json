@@ -46,7 +46,7 @@
 		{
 			"id": "services",
 			"title": "Personal Training",
-			"body": "In person training to help you on your way in your fitness journey. Whether that be just starting out or someone wanting to build on their strength. All sessions are fully tailored to help you achieve your goal. I ensure we set performance goals instead of physical goals, you'll find the journey is smoother.",
+			"body": "In person training to help you on your way in your fitness journey. Whether that be just starting out or someone wanting to build on their strength. All sessions are fully tailored to help you achieve your goal. I ensure we set performance goals instead of physical goals, you'll find the journey is smoother. If you're interested and local I am based in Horwich.",
 			"list": [
 				{
 					"item": "1 session : £30. Not sure, try out 1 session."
@@ -58,11 +58,11 @@
 					"item": "8 sessions : £200. Two sessions a week, let's make change."
 				}
 			],
-			"disclaimer": "* All session to take within a month. Cancellations must be notified 24-48hrs prior to session otherwise you will be charged.",
+			"disclaimer": "* All sessions are to take within a month. Cancellations must be notified 24-48hrs prior to session otherwise you will be charged.",
 			"button": "Register my interest",
 			"imagePosition": "none",
-			"image1": "",
-			"image2": "",
+			"image1": "/images/jenbacksquat-480w.jpg",
+			"image2": "/images/jenbacksquat-800w.jpg",
 			"imageTitle": "",
 			"quote": "You don't have to sacrifice life to be fitter and healthier."
 		},
@@ -72,9 +72,9 @@
 			"body": "Fight for Fit is an online training program that is tailored to suit your needs. You will be amongst a group of people who will get tailored plans, weekly zoom check ins, recipe ideas and a whats app support group. You will be held accountable in this community but, you will win.",
 			"button": "Register my interest",
 			"imagePosition": "reverse",
-			"image1": "",
-			"image2": "",
-			"imageTitle": "",
+			"image1": "/images/coming-soon-480w.png",
+			"image2": "/images/coming-soon-800w.png",
+			"imageTitle": "New online community coming soon",
 			"quote": "Restriction doesn't belong here, moderation and enjoyment does."
 		},
 		{
@@ -83,9 +83,9 @@
 			"body": "Online training is a tailored program adapted to you to allow you to reach your desired goals. You're the kind of person that knows what they're doing in a gym, has the drive and discipline but, just needs help with structuring your training.",
 			"button": "Register my interest",
 			"imagePosition": "none",
-			"image1": "",
-			"image2": "",
-			"imageTitle": "",
+			"image1": "/images/LisaKimFitProgress-480w.jpg",
+			"image2": "/images/LisaKimFitProgress-800w.jpg",
+			"imageTitle": "Lisa Kim Fit online training progress",
 			"quote": "Motivation comes after doing, consistency becomes discipline, discpline leads to change."
 		}
 	],
