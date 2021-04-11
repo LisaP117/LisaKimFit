@@ -166,5 +166,12 @@
 				}
 			]
 		}
+	],
+	"errorpage": [
+		{
+			"id": "errorpage",
+			"title": "404 Page Error",
+			"body": "Sorry we can't find the page you are looking for. Return to the "
+		}
 	]
 }
