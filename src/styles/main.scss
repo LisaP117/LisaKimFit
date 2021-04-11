@@ -377,6 +377,10 @@ header {
 			margin-bottom: 60px;
 		}
 
+		&--quotes {
+			margin-bottom: 0!important;
+		}
+
 		img {
 			display: block;
 			margin: 0 auto;
@@ -416,6 +420,10 @@ header {
 			position: relative;
 			width: 50%;
 
+			&--quotes {
+				width: 100%;
+			}
+
 			&--reverse {
 				order: -1;
 			}
@@ -434,8 +442,48 @@ header {
 	}
 }
 
-// posts divider
+// quotes section only 
+.quote {
+	&__wrapper {
+		blockquote {
+			font-family: $font-stack;
+			font-size: 16px;
 
+			.quote {
+				@include flexbox(row, center, baseline);
+				i.fas.fa-quote-left {
+					align-self: flex-end;
+				}
+			}
+
+			figcaption {
+				display: block;
+				margin-top: 15px;
+				padding-bottom: 40px;
+				font-weight: bold;
+				color: $primary-purple;
+				border-bottom: 1px solid $primary-purple;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.quote {
+		&__wrapper {
+			@include flexbox(row, center, baseline);
+			blockquote {
+				width: 33.3%;
+				figcaption { 
+					padding-bottom: 0;
+					border-bottom: 0 solid transparent;
+				}
+			}
+		}
+	}
+}
+
+// posts divider
 .divider {
 	display: block;
 	width: 100%;

@@ -44,6 +44,24 @@
 			"quote": "To be able to achieve you must hold yourself accountable."
 		},
 		{
+			"id": "testimonials",
+			"title": "Some kind words from my clients",
+			"quotes": [
+				{
+					"quote": "I've gained so much confidence and strength and even put on 3kg which may only be a small amount but it's more than i've managed before. I've also only felt confident to lift because of how attentitive you've been, ensuring my technique is right from all angles.",
+					"author": "Nisha P, Bolton"
+				},
+				{
+					"quote": "I've been doing PT sessions with Lisa for a few months now and she's been amazing. I started off not being able to life and now I am deadlifting 60kg! I feel stronger than ever!",
+					"author": "Lauren C, Horwich"
+				},
+				{
+					"quote": "I have been doing your saved online workuouts, I have been loving them. You really have helped me, if only you knew how much.",
+					"author": "Henna C, Leicester"
+				}
+			]
+		},
+		{
 			"id": "services",
 			"title": "Personal Training",
 			"body": "In person training to help you on your way in your fitness journey. Whether that be just starting out or someone wanting to build on their strength. All sessions are fully tailored to help you achieve your goal. I ensure we set performance goals instead of physical goals, you'll find the journey is smoother. If you're interested and local I am based in Horwich.",

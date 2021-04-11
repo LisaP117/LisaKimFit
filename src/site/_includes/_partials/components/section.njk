@@ -2,6 +2,7 @@
 <div class="posts">
 	<section id="{{ section.id }}" class="section {% if section.imagePosition  == 'reverse' %}section__column--alignRight{% endif %}" aria-labelledby="{{ section.id }}">
 		<div class="section__row">
+			{% if section.id != 'testimonials' %}
 			<div class="section__column">
 				<h2>{{ section.title }}</h2>
 				<p>{{ section.body }}</p>
@@ -31,6 +32,23 @@
 				{% endif %}
 			</div>
 		</div>
+		{% else %}
+			<div class="section__column section__column--quotes">
+				<h2>{{ section.title }}</h2>
+				<div class="quote__wrapper">
+				{% for quote in section.quotes %}
+					<blockquote>
+						<div class="quote">
+							<i class="fas fa-quote-right"></i><p>{{ quote.quote }}</p><i class="fas fa-quote-left"></i>
+						</div>
+						<figcaption>
+							{{ quote.author }}
+						</figcaption>
+					</blockquote>
+				{% endfor %}
+				</div>
+			</div>
+		{% endif %}
 	</section>
 {% if section.quote %}
 	<blockquote>
