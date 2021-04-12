@@ -1,10 +1,5 @@
-@font-face {
-  font-family: 'Impact';
-  src: url('/src/fonts/Impact-Font/impact.ttf')  format('truetype'), /* Safari, Android, iOS */
-}
-
 $font-stack: "Questrial", sans-serif;;
-$title-font: "Impact", 	sans-serif;
+$title-font: Impact, 	sans-serif;
 $primary-purple: #392033;
 $primary-coral: #FD6051;
 $white: #FFFFFF;
