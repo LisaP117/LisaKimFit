@@ -7,7 +7,7 @@
 				<p>{{ contact.body }}</p>
 			</div>
 			<div class="section__column">
-				<form class="form" data-component="form" action="mailto:info@lisakimfit.com" method="post">
+				<form class="form" data-component="form" action="mailto:info@lisakimfit.com" method="post" enctype=”multipart/form-data”>
 					<div data-fieldset-wrap>
 						<span class="disclaimer"><small>* required field</small></span>
 						{% for field in contact.fields %}

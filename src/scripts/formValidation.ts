@@ -1,6 +1,7 @@
 const formValidation = (form: HTMLFormElement) => {
 
 	const setStatusMessage = (response: Response) => {
+		console.log(response);
 		const submitted: HTMLElement | any = form.querySelector('[data-form-submitted]');
 		const errorMessage: HTMLElement | any = form.querySelector('[data-form-error]');
 		const successMessage: HTMLElement | any = form.querySelector('[data-form-success]');
@@ -29,10 +30,14 @@ const formValidation = (form: HTMLFormElement) => {
 
 		await fetch(form.action, {
 			method: 'POST',
-			headers: { 'Content-type': 'application/json' },
+			headers: {
+				'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
+			},
 			body: JSON.stringify(data)
 		})
-		.then(setStatusMessage);
+		.then(setStatusMessage)
+		.catch(setStatusMessage)
 	}
 
 	const activateSubmitButton = () => {
