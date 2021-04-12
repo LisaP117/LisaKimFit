@@ -15,12 +15,12 @@
 					</ul>
 				{% endif %}
 
-				{% if section.disclaimer %}
-					<p class="disclaimer"><small>{{ section.disclaimer }}</small></p>
-				{% endif %}
-
 				{% if section.button %}
 					<button type="button" data-contact-button aria-labelledby="button">{{ section.button }}</button>
+				{% endif %}
+
+				{% if section.disclaimer %}
+					<p class="disclaimer"><small>{{ section.disclaimer }}</small></p>
 				{% endif %}
 			</div>
 			<div class="section__column {% if section.imagePosition  == 'reverse' %}section__column--reverse{% endif %}">
