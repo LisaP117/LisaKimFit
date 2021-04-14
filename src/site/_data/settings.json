@@ -111,7 +111,7 @@
 		{
 			"id": "contact",
 			"title": "Contact",
-			"body": "If you have any questions or just need to get in touch for more information, please fill out the form and we'll get back to you within 24-48hrs.",
+			"body": "If you have any questions, please fill out the form and I'll get back to you within 24-48hrs.",
 			"fields": [
 				{
 					"id": "name",

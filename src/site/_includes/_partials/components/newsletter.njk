@@ -1,23 +1,34 @@
 {% for newsletter in settings.newsletter %}
 <div class="newsletter">
 	<h2>{{ newsletter.title }}</h2>
-	<p>{{ newsletter.body }}</p>
-	<form class="newsletter__form" data-component="form" action="" method="post">
+	<h3>COMING SOON</h3>
+	{# <p>{{ newsletter.body }}</p>
+	<form class="newsletter__form" data-component="form" action="https://api.mailerlite.com/api/v1/subscribers/1/" method="POST">
 		<div data-fieldset-wrap>
 			{% for field in newsletter.fields %}
 				<fieldset class="newsletter__form__field" data-fieldset>
-					<label for="newsletter__{{field.id}}"><span data-label-text class="noError">{{field.name}}*<i class="far fa-check-circle hide" data-field-complete></i></span> <span class="hide" data-field-error><i class="fas fa-exclamation-circle"></i>Please enter a valid {{field.id}}</span></label>
-					<input name="{{field.name}}" type="{{field.type}}" id="newsletter__{{field.id}}" data-input placeholder="{{field.placeholder}}" {{ 'required' if 'true' in field.isRequired }} noError />
+					<label for="newsletter__{{field.id}}">
+						<span data-label-text class="noError">
+							{{field.name}}*
+							<i class="far fa-check-circle hide" data-field-complete></i>
+						</span>
+						<span class="hide" data-field-error>
+							<i class="fas fa-exclamation-circle"></i>
+							Please enter a valid {{field.id}}
+						</span>
+					</label>
+					<input name="fields[{{field.id}}]" type="{{field.type}}" id="newsletter__{{field.id}}" data-input placeholder="{{field.placeholder}}" {{ 'required' if 'true' in field.isRequired }} noError />
 				</fieldset>
 			{% endfor %}
 			<fieldset class="newsletter__form__field">
-				<input class="newsletter__form__field__submit" data-submit-button type="button" value="Subscribe" disabled>
+				<button class="newsletter__form__field__submit" data-submit-button type="button" disabled>SUBSCRIBE</button>
 			</fieldset>	
 		</div>
-		<div class="newsletter__form__messages" data-form-submitted style="display: none;">
-			<p data-form-success style="display: none"> Thank you for subscribing. Make sure to add <a href="mailto:info@lisakimfit.com">info@lisakimfit.com</a> to your contacts!</p>
-			<p data-form-error style="display: none"> Oops! Something went wrong, please refresh and try again!</p>
-		</div>
 	</form>
-</div>
+	<div class="newsletter__form__messages" data-form-submitted style="display: none;">
+		<p data-form-success style="display: none"> Thank you for subscribing. Make sure to add info@lisakimfit.com to your
+			contacts!</p>
+		<p data-form-error style="display: none"> Oops! Something went wrong, please refresh and try again!<a href="/" class="close" data-button="close"><i class="fas fa-times"></i></a></p>
+	</div>
+</div> #}
 {% endfor %}

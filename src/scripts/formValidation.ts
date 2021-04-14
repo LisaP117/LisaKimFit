@@ -1,19 +1,33 @@
+const MailerLite = require('mailerlite-api-v2-node').default
+const mailerLite = new MailerLite('1ddc232129343a09f2a98a764fc22d62');
+
 const formValidation = (form: HTMLFormElement) => {
 
-	const setStatusMessage = (response: Response) => {
-		console.log(response);
-		const submitted: HTMLElement | any = form.querySelector('[data-form-submitted]');
-		const errorMessage: HTMLElement | any = form.querySelector('[data-form-error]');
-		const successMessage: HTMLElement | any = form.querySelector('[data-form-success]');
-		const fieldsetWrap: HTMLElement | any = form.querySelector('[data-fieldset-wrap]');
+	const parentEl: HTMLFormElement | any = form.parentNode;
+	const submitted: HTMLElement | any = parentEl.querySelector('[data-form-submitted]');
+	const errorMessage: HTMLElement | any = submitted.querySelector('[data-form-error]');
+	const successMessage: HTMLElement | any = submitted.querySelector('[data-form-success]');
 
+	const closeStatusMessages = (e: Event) => {
+		errorMessage.style.display = 'none';
+		submitted.style.display = 'none';
+		e.preventDefault();
+	}
+
+	const closeErrorMessage = (errorMessage: HTMLElement) => {
+		const closeButton: HTMLButtonElement | any = errorMessage.querySelector('[data-button="close"]');
+		closeButton.addEventListener('click', closeStatusMessages);
+	}
+
+	const setStatusMessage = (response: Response) => {
 		submitted.style.display = 'block';
 
 		if (response.status === 200) {
-			successMessage.style.display = 'block';
-			fieldsetWrap.style.display = 'none';
+			successMessage.style.display = 'flex';
+			form.style.display = 'none';
 		} else {
-			errorMessage.style.display = 'block';
+			errorMessage.style.display = 'flex';
+			closeErrorMessage(errorMessage);
 		}
 	}
 
@@ -23,27 +37,33 @@ const formValidation = (form: HTMLFormElement) => {
 
 		for (var input of inputfields) {
 			const field = input as HTMLInputElement
-			data.push({ input: field.value });
+
+			if (field.name === 'fields[name]') {
+				data.push({ name : field.value });
+			}
+			if (field.name === 'fields[email]') {
+				data.push({ email: field.value });
+			}
+			if (field.name !== 'fields[email]' && field.name !== 'fields[name]'){
+				data.push({ input: field.value })
+			}	
 		}
-
-		e.preventDefault();
-
+		
 		await fetch(form.action, {
-			method: 'POST',
-			headers: {
-				'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
-				'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-			},
+			method: form.method,
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: JSON.stringify(data)
 		})
-		.then(setStatusMessage)
-		.catch(setStatusMessage)
+			.then(setStatusMessage)
+			.catch(setStatusMessage)
+
+		e.preventDefault();
 	}
 
 	const activateSubmitButton = () => {
-		const fieldsetArray = form.querySelectorAll('[data-fieldset]') as NodeList;
-		const completedArray = form.querySelectorAll('.completed') as NodeList;
-		const formSubmit = form.querySelector('[data-submit-button]') as HTMLInputElement;
+		const fieldsetArray: NodeList | any = form.querySelectorAll('[data-fieldset]');
+		const completedArray: NodeList | any = form.querySelectorAll('.completed');
+		const formSubmit: HTMLInputElement | any = form.querySelector('[data-submit-button]');
 
 		if (completedArray.length === fieldsetArray.length) {
 			formSubmit.disabled = false;

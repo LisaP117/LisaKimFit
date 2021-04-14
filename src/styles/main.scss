@@ -536,8 +536,21 @@ header {
 	}
 
 	&__messages {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+		background: $primary-coral;
 		color: $white;
-		padding: 0 15px;
+		padding: 1px 15px;
+		margin-top: 10px;
+		border-radius: 4px;
+
+		p { 
+			@include flexbox(row, space-between, center);
+			width: 100%;
+			padding: 0; 
+		}
+
 	}
 
 }
@@ -562,6 +575,10 @@ header {
 		width: 100%;
 		margin-top: 35px;
 		@include flexbox(column, center, center);
+
+		[data-form-submitted] {
+			text-align: center;
+		}
 
 		[data-fieldset-wrap] {
 			max-width: 400px;
@@ -593,6 +610,7 @@ header {
 			}
 
 			&__submit {
+				@extend %input;
 				@extend %submit
 			}
 		}
@@ -600,6 +618,22 @@ header {
 		input {
 			@extend %input;
 			border: 2px solid $primary-coral;
+		}
+
+		&__messages {
+			max-width: 800px;
+			width: 100%;
+			background: $primary-coral;
+			color: $white;
+			padding: 1px 15px;
+			margin-top: 10px;
+			border-radius: 4px;
+
+			p { 
+				@include flexbox(row, space-between, center);
+				width: 100%;
+				padding: 0; 
+			}
 		}
 
 	}
