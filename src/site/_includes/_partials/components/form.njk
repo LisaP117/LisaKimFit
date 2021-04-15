@@ -7,7 +7,7 @@
 				<p>{{ contact.body }}</p>
 			</div>
 			<div class="section__column">
-				<form class="form" data-component="form" name="contact-form" method="POST" action="/index.njk#data-form-submitted" enctype=”multipart/form-data” netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+				<form class="form" data-component="form" name="contact-form" method="POST" action="/#data-form-submitted" enctype=”multipart/form-data” netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
 					<div data-fieldset-wrap>
 						<span class="disclaimer"><small>* required field</small></span>
 						{% for field in contact.fields %}
