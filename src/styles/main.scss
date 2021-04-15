@@ -86,6 +86,22 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 	}
 }
 
+%formmessage {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	background: $primary-coral;
+	color: $white;
+	padding: 1px 15px;
+	margin: 10px auto 0;
+	border-radius: 4px;
+	p { 
+		@include flexbox(row, space-between, center);
+		width: 100%;
+		padding: 0!important; 
+	}
+}
+
 *,
 *:before,
 *:after {
@@ -365,10 +381,6 @@ header {
 	}
 }
 
-#thankYou {
-	height: 75vh;
-}
-
 // section block
 .section {
 	padding: 20px;
@@ -538,26 +550,12 @@ header {
 		}
 
 		&__submit {
-			@extend %submit
+			@extend %submit;
 		}
 	}
 
 	&__messages {
-		position: absolute;
-		width: 100%;
-		bottom: 0;
-		background: $primary-coral;
-		color: $white;
-		padding: 1px 15px;
-		margin: 10px auto 0;
-		border-radius: 4px;
-
-		p { 
-			@include flexbox(row, space-between, center);
-			width: 100%;
-			padding: 0; 
-		}
-
+		@extend %formmessage;
 	}
 
 }
@@ -633,18 +631,7 @@ header {
 
 		&__messages {
 			max-width: 800px;
-			width: 100%;
-			background: $primary-coral;
-			color: $white;
-			padding: 1px 15px;
-			margin: 10px auto 0;
-			border-radius: 4px;
-
-			p { 
-				@include flexbox(row, space-between, center);
-				width: 100%;
-				padding: 0; 
-			}
+			@extend %formmessage;
 		}
 
 	}
