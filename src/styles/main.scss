@@ -87,9 +87,7 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 }
 
 %formmessage {
-	position: absolute;
 	width: 100%;
-	bottom: 0px;
 	background: $primary-coral;
 	color: $white;
 	padding: 1px 15px;
@@ -555,6 +553,8 @@ header {
 	}
 
 	&__messages {
+		position: absolute;
+		bottom: 0px;
 		@extend %formmessage;
 	}
 
