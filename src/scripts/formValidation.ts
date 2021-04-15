@@ -1,17 +1,13 @@
-const MailerLite = require('mailerlite-api-v2-node').default
-const mailerLite = new MailerLite('1ddc232129343a09f2a98a764fc22d62');
-
 const formValidation = (form: HTMLFormElement) => {
 
-	const parentEl: HTMLFormElement | any = form.parentNode;
+	const parentEl: HTMLElement | any = form.parentNode;
 	const submitted: HTMLElement | any = parentEl.querySelector('[data-form-submitted]');
 	const errorMessage: HTMLElement | any = submitted.querySelector('[data-form-error]');
 	const successMessage: HTMLElement | any = submitted.querySelector('[data-form-success]');
 
-	const closeStatusMessages = (e: Event) => {
+	const closeStatusMessages = () => {
 		errorMessage.style.display = 'none';
 		submitted.style.display = 'none';
-		e.preventDefault();
 	}
 
 	const closeErrorMessage = (errorMessage: HTMLElement) => {
@@ -20,6 +16,7 @@ const formValidation = (form: HTMLFormElement) => {
 	}
 
 	const setStatusMessage = (response: Response) => {
+
 		submitted.style.display = 'block';
 
 		if (response.status === 200) {
@@ -33,29 +30,32 @@ const formValidation = (form: HTMLFormElement) => {
 
 	async function handleSubmit(e: Event) {
 		const inputfields = form.querySelectorAll('[data-input') as NodeList;
+		const formData: any = new FormData(form);
+		const url: string | any = form.getAttribute('action');
+		let bodyText;
 		let data = [];
 
 		for (var input of inputfields) {
 			const field = input as HTMLInputElement
-
-			if (field.name === 'fields[name]') {
-				data.push({ name : field.value });
-			}
-			if (field.name === 'fields[email]') {
-				data.push({ email: field.value });
-			}
-			if (field.name !== 'fields[email]' && field.name !== 'fields[name]'){
-				data.push({ input: field.value })
-			}	
+			data.push({ input: field.value })
 		}
-		
-		await fetch(form.action, {
+
+		if (form.classList.contains('form__newsletter')) {
+			bodyText = JSON.stringify(data)
+		} else {
+			bodyText = new URLSearchParams(formData).toString()
+		}
+
+		await fetch(url, {
 			method: form.method,
-			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: JSON.stringify(data)
+			headers: { 
+				'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
+				'Content-Type': 'application/x-www-form-urlencoded'
+			},
+			body: bodyText
 		})
-			.then(setStatusMessage)
-			.catch(setStatusMessage)
+		.then(setStatusMessage)
+		.catch(setStatusMessage)
 
 		e.preventDefault();
 	}
@@ -63,7 +63,7 @@ const formValidation = (form: HTMLFormElement) => {
 	const activateSubmitButton = () => {
 		const fieldsetArray: NodeList | any = form.querySelectorAll('[data-fieldset]');
 		const completedArray: NodeList | any = form.querySelectorAll('.completed');
-		const formSubmit: HTMLInputElement | any = form.querySelector('[data-submit-button]');
+		const formSubmit: HTMLElement | any = form.querySelector('[data-submit-button]');
 
 		if (completedArray.length === fieldsetArray.length) {
 			formSubmit.disabled = false;

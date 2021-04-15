@@ -93,6 +93,7 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 }
 
 html {
+	height: 100%;
   font-size: 16px;
 }
 
@@ -146,6 +147,8 @@ i.fas {
 	color: $white;
 	position: relative;
 }
+
+[data-button] { cursor: pointer }
 
 [data-field-error] {
 	@include flexbox(row, center, center);
@@ -362,6 +365,10 @@ header {
 	}
 }
 
+#thankYou {
+	height: 75vh;
+}
+
 // section block
 .section {
 	padding: 20px;
@@ -542,7 +549,7 @@ header {
 		background: $primary-coral;
 		color: $white;
 		padding: 1px 15px;
-		margin-top: 10px;
+		margin: 10px auto 0;
 		border-radius: 4px;
 
 		p { 
@@ -570,6 +577,10 @@ header {
 .newsletter {
 	padding: 55px 20px;
 	@include flexbox(column, space-between, center);
+
+	&__embedd-wrapper {
+		width: 100%;
+	}
 
 	&__form {
 		width: 100%;
@@ -626,7 +637,7 @@ header {
 			background: $primary-coral;
 			color: $white;
 			padding: 1px 15px;
-			margin-top: 10px;
+			margin: 10px auto 0;
 			border-radius: 4px;
 
 			p { 
