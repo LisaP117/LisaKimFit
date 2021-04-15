@@ -66,10 +66,10 @@ const formValidation = (form: HTMLFormElement) => {
 		const formSubmit: HTMLElement | any = form.querySelector('[data-submit-button]');
 
 		if (completedArray.length === fieldsetArray.length) {
-			formSubmit.disabled = false;
+			formSubmit.classList.remove('disabled');
 			formSubmit.addEventListener('click', handleSubmit);
 		} else {
-			formSubmit.disabled = true;
+			formSubmit.classList.add('disabled');
 		}
 	}
 
@@ -104,8 +104,7 @@ const formValidation = (form: HTMLFormElement) => {
 
 		if (elemId.indexOf("email") > -1) {
 			const emailTest = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(elem.value);
-
-			if (elem.value === '' && emailTest === false) {
+			if (emailTest === false) {
 				errors(error, labelText);
 			} else {
 				success(error, labelText, complete, fieldset);

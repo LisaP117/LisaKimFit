@@ -51,7 +51,7 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 		outline: none;
 	}
 
-	&:disabled {
+	&.disabled {
     opacity: 0.5;
     cursor: not-allowed;
 	}
@@ -545,6 +545,11 @@ header {
 			&:focus {
 				outline: none;
 			}
+		}
+
+		[data-fake-submit] {
+			opacity: 0;
+			position: absolute;
 		}
 
 		&__submit {
