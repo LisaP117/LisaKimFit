@@ -7,7 +7,7 @@
 				<p>{{ contact.body }}</p>
 			</div>
 			<div class="section__column">
-				<form class="form" data-component="form" name="contact-form" method="POST" action="/#data-form-submitted" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+				<form class="form" data-component="form" name="contact-form" method="POST" action="#data-form-submitted" netlify netlify-honeypot="bot-field" data-netlify-recaptcha="true">
 					<div data-fieldset-wrap>
 						<span class="disclaimer"><small>* required field</small></span>
 						{% for field in contact.fields %}
@@ -21,7 +21,7 @@
 							</fieldset>
 						{% endfor %}
 						<fieldset class="form__field">
-							<input class="form__field__submit disabled" data-submit-button type="button" value="Send" data-input>
+							<input class="form__field__submit disabled" data-submit-button type="submit" value="Send" data-input>
 						</fieldset>	
 					</div>
 				</form>

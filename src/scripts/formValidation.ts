@@ -29,7 +29,7 @@ const formValidation = (form: HTMLFormElement) => {
 	}
 
 	async function handleSubmit(e: Event) {
-		const inputfields = form.querySelectorAll('[data-input') as NodeList;
+		const inputfields = form.querySelectorAll('[data-input]') as NodeList;
 		const formData: any = new FormData(form);
 		const url: string | any = form.getAttribute('action');
 		let bodyText;
