@@ -21,6 +21,7 @@ const formValidation = (form: HTMLFormElement) => {
 		if (response.status === 200) {
 			successMessage.style.display = 'flex';
 			form.style.display = 'none';
+			submitted.classList.add('submitted');
 		} else {
 			errorMessage.style.display = 'flex';
 			closeErrorMessage(errorMessage);

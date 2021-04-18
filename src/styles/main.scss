@@ -87,7 +87,9 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 }
 
 %formmessage {
-	width: 100%;
+	width: 90%;
+	left: 0;
+  right: 0;
 	background: $primary-coral;
 	color: $white;
 	padding: 1px 15px;
@@ -344,6 +346,7 @@ header {
 // posts
 .posts {
 	padding: 20px 0 0;
+	position: relative;
 
 	&:nth-child(odd) {
 		background: $white;
@@ -383,12 +386,14 @@ header {
 .section {
 	padding: 20px;
 	margin: 0;
+	position: relative;
 
 	&:last-child {
 		padding: 20px 20px 40px;
 	}
 
 	&__column {
+		position: relative;
 
 		&:nth-child(1) {
 			margin-bottom: 60px;
@@ -434,7 +439,6 @@ header {
 		}
 
 		&__column {
-			position: relative;
 			width: 50%;
 
 			&--solo {
@@ -515,6 +519,7 @@ header {
 	padding: 10px 3px;
 	background: $primary-purple;
 	border-radius: 5px;
+	position: relative;
 
 	.disclaimer {
 		color: $white;
@@ -561,6 +566,11 @@ header {
 		position: absolute;
 		bottom: 0px;
 		@extend %formmessage;
+		&.submitted {
+			position: relative;
+			bottom: 0;
+			margin: 0 auto;
+		}
 	}
 
 }
@@ -580,7 +590,8 @@ header {
 .newsletter {
 	padding: 55px 20px;
 	@include flexbox(column, space-between, center);
-
+	position: relative;
+	
 	&__embedd-wrapper {
 		width: 100%;
 	}
