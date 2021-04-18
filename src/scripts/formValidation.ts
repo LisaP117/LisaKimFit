@@ -16,7 +16,6 @@ const formValidation = (form: HTMLFormElement) => {
 	}
 
 	const setStatusMessage = (response: Response) => {
-
 		submitted.style.display = 'block';
 
 		if (response.status === 200) {
@@ -46,6 +45,8 @@ const formValidation = (form: HTMLFormElement) => {
 			bodyText = new URLSearchParams(formData).toString()
 		}
 
+		e.preventDefault();
+
 		await fetch(url, {
 			method: form.method,
 			headers: { 
@@ -56,8 +57,6 @@ const formValidation = (form: HTMLFormElement) => {
 		})
 		.then(setStatusMessage)
 		.catch(setStatusMessage)
-
-		e.preventDefault();
 	}
 
 	const activateSubmitButton = () => {
