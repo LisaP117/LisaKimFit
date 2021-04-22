@@ -18,7 +18,7 @@
 							Please enter a valid {{field.id}}
 						</span>
 					</label>
-					<input id="newsletter__{{field.id}}" class="form-control" type="{{field.type}}" name="fields[{{field.id}}]" data-input="{{field.name}}" placeholder="{{field.placeholder}}" {{ 'required' if 'true' in field.isRequired }} noError />
+					<input id="newsletter__{{field.id}}" class="form-control" type="{{field.type}}" name="fields[{{field.id}}]" data-input="{{field.name}}" placeholder="{{field.placeholder}}" {{ 'required' if 'true' in field.isRequired }} />
 				</div>
 				{% endfor %}
 				<div class="newsletter__form__field ml-button-horizontal primary labelsOn">

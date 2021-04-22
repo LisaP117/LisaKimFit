@@ -27,7 +27,7 @@
 											<textarea name="fields[company]" id="{{field.id}}" class="form-control" data-inputmask="" data-input rows="5" placeholder="{{field.placeholder}}"></textarea>
 											{% else %}
 											<input name="fields[{{field.id}}]" type="{{field.type}}" id="{{field.id}}" class="form-control" data-inputmask="" data-input placeholder="{{field.placeholder}}"
-												{{ 'required' if 'true' in field.isRequired }} noError />
+												{{ 'required' if 'true' in field.isRequired }} />
 											{% endif %}
 										</fieldset>
 										{% endfor %}

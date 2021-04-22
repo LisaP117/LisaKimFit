@@ -79,19 +79,21 @@ const formValidation = (form: HTMLFormElement) => {
 		}
 	}
 
-	const errors = (error: HTMLElement, labelText: HTMLElement) => {
+	const errors = (elem: HTMLInputElement, error: HTMLElement, labelText: HTMLElement) => {
 		error.classList.remove('hide');
 		labelText.classList.remove('noError');
 		error.setAttribute('aria-hidden', 'false');
+		elem.setAttribute('aria-invalid', 'true');
 	}
 
-	const success = (error: HTMLElement, labelText: HTMLElement, complete: HTMLElement, fieldset: HTMLElement) => {
+	const success = (elem: HTMLInputElement, error: HTMLElement, labelText: HTMLElement, complete: HTMLElement, fieldset: HTMLElement) => {
 		error.classList.add('hide');
 		error.setAttribute('aria-hidden', 'true');
 		labelText.classList.add('noError');
 		complete.classList.remove('hide');
 		complete.setAttribute('aria-hidden', 'false');
 		fieldset.classList.add('completed');
+		elem.setAttribute('aria-invalid', 'false');
 	}
 
 	const validate = (e: Event) => {
@@ -105,34 +107,34 @@ const formValidation = (form: HTMLFormElement) => {
 
 		if (elemId.indexOf("name") >-1) {
 			if (elem.value.length < 3 ) {
-				errors(error, labelText);
+				errors(elem, error, labelText);
 			} else {
-				success(error, labelText, complete, fieldset);
+				success(elem, error, labelText, complete, fieldset);
 			}
 		}
 
 		if (elemId.indexOf("email") > -1) {
 			const emailTest = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(elem.value);
 			if (emailTest === false) {
-				errors(error, labelText);
+				errors(elem, error, labelText);
 			} else {
-				success(error, labelText, complete, fieldset);
+				success(elem, error, labelText, complete, fieldset);
 			}
 		}
 
 		if (elemId.indexOf("phone") > -1) {
 			if (elem.value.length < 10) {
-				errors(error, labelText);
+				errors(elem, error, labelText);
 			} else {
-				success(error, labelText, complete, fieldset);
+				success(elem, error, labelText, complete, fieldset);
 			}
 		}
 
 		if (elemId.indexOf("message") > -1) {
 			if (elem.value.length < 5) {
-				errors(error, labelText);
+				errors(elem, error, labelText);
 			} else {
-				success(error, labelText, complete, fieldset);
+				success(elem, error, labelText, complete, fieldset);
 			}
 		}
 
