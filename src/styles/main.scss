@@ -147,7 +147,10 @@ a {
 
 a:link,
 a:active,
-a:focus { color: inherit; }
+a:focus { 
+	color: inherit; 
+	text-decoration: none;
+}
 
 p > a {
 	display: inline; 
@@ -280,6 +283,14 @@ header {
 
 	&__listItem {
 		@extend %listitem;
+	}
+
+	&__link {
+		color: $white;
+		&:focus,
+		&:active {
+			color: $white;
+		}
 	}
 
 	&__mobile {

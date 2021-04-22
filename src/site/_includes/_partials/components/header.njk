@@ -14,7 +14,12 @@
 	<div class="navigation__mobile navigation__mobile--closed" data-menu aria-expanded="false">
 		<ul class="navigation__list" aria-role="menu">
 			{% for item in settings.navigation %}
-			<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem">{{item.title}}</li>
+				{% if pagename %}
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link"
+						href="/" aria-role="link">{{item.title}}</a></li>
+				{% else %}
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem">{{item.title}}</li>
+				{% endif %}
 			{% endfor %}
 		</ul>
 	</div>
