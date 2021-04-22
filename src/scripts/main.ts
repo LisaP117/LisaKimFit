@@ -60,7 +60,7 @@ observe((element: HTMLElement) => {
 observe((element: HTMLElement) => {
 	import(/* webpackChunkName: "scroll to section" */ 'Src/scripts/scrollToSection')
 		.then(module => initModule(module, element))
-		.catch(err => console.error(`Error in: Links - ${err}`));
+		.catch(err => console.error(`Error in: Scroll to section - ${err}`));
 }, document.querySelectorAll('li[data-link]'));
 
 observe((element: HTMLElement) => {
@@ -72,7 +72,7 @@ observe((element: HTMLElement) => {
 observe((element: HTMLElement) => {
 	import(/* webpackChunkName: "scroll to form" */ 'Src/scripts/scrollToForm')
 		.then(module => initModule(module, element))
-		.catch(err => console.error(`Error in: Button - ${err}`));
+		.catch(err => console.error(`Error in: Scroll to form - ${err}`));
 }, document.querySelectorAll('[data-contact-button]'));
 
 export { };

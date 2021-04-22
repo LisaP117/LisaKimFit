@@ -208,6 +208,8 @@ blockquote {
 	line-height: 1;
 }
 
+.page { position: relative; }
+
 header {
 	width: 100%;
 	position: fixed;
@@ -698,6 +700,10 @@ header {
 	&__listItem {
 		@extend %listitem;
 		color: $white;
+		a, a:active, a:focus {
+			text-decoration: none;
+			color: $white;
+		}
 	}
 
 	p {
@@ -718,5 +724,17 @@ header {
 
 		p { padding: 0; }
 
+	}
+}
+
+.cookie-banner {
+	&__body {
+		position: relative;
+		color: $primary-purple;
+	}
+
+	&__sections {
+		@include flexbox(row, space-between, flex-start);
+		flex-wrap: wrap;
 	}
 }
