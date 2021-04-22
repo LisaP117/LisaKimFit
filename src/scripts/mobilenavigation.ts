@@ -12,9 +12,11 @@ const mobileMenu = (header: HTMLElement) => {
 		if (parentNode.nextElementSibling !== null) {
 			sibling = parentNode.nextElementSibling;
 			nav.classList.remove('navigation__mobile--closed');
+			nav.setAttribute('aria-expanded', 'true');
 		} else {
 			sibling = parentNode.previousElementSibling;
 			nav.classList.add('navigation__mobile--closed');
+			nav.setAttribute('aria-expanded', 'false');
 		}
 
 		parentNode.classList.remove('show');

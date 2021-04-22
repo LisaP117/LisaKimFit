@@ -1,10 +1,10 @@
 <footer class="footer">
 	<div class="container">
-		<ul class="footer__list">
+		<ul class="footer__list" aria-role="menu">
 			{% for item in settings.navigation %}
-				<li class="footer__listItem" data-link="{{item.ref}}">{{item.title}}</li>
+				<li class="footer__listItem" data-link="{{item.ref}}" aria-role="menuitem">{{item.title}}</li>
 			{% endfor %}
-				<li class="footer__listItem"><a href="/cookie-policy" aria-labelledby="cookie policy link">Cookie Policy</a></li>
+				<li class="footer__listItem"><a href="/cookie-policy" aria-role="link" aria-labelledby="cookie policy link">Cookie Policy</a></li>
 		</ul>
 		<p>Copyright &copy; Lisa Kim Fit 2021<br/>Website by <b>She Who Codes LTD</b></p>
 	</div>

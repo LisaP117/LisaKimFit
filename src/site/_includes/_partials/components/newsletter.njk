@@ -11,9 +11,9 @@
 					<label for="newsletter__{{field.id}}">
 						<span data-label-text class="noError">
 							{{field.name}}*
-							<i class="far fa-check-circle hide" data-field-complete></i>
+							<i class="far fa-check-circle hide" data-field-complete aria-hidden="true"></i>
 						</span>
-						<span class="hide" data-field-error>
+						<span class="hide" data-field-error aria-errormessage aria-hidden="true">
 							<i class="fas fa-exclamation-circle"></i>
 							Please enter a valid {{field.id}}
 						</span>
@@ -22,16 +22,16 @@
 				</div>
 				{% endfor %}
 				<div class="newsletter__form__field ml-button-horizontal primary labelsOn">
-					<button class="newsletter__form__field__submit primary disabled" data-submit-button type="submit">SUBSCRIBE</button>
+					<button class="newsletter__form__field__submit primary disabled" aria-disabled="true" data-submit-button aria-role="button" type="submit">SUBSCRIBE</button>
 				</div>
 			</div>
 			<input type="hidden" name="ml-submit" value="1">
 			<input type="hidden" name="anticsrf" value="true">
 		</form>
-		<div data-form-submitted class="newsletter__form__messages ml-form-successBody ml-form-successContent row-success" style="display: none;">
-			<p data-form-success style="display: none"> Thank you for subscribing. Make sure to add info@lisakimfit.com to your
+		<div data-form-submitted class="newsletter__form__messages ml-form-successBody ml-form-successContent row-success" style="display: none;" aria-hidden="true">
+			<p data-form-success style="display: none" aria-hidden="true"> Thank you for subscribing. Make sure to add info@lisakimfit.com to your
 	contacts!</p>
-			<p data-form-error style="display: none"> Oops! Something went wrong, please refresh and try again!<a href="/" class="close" data-button="close"><i class="fas fa-times"></i></a></p>
+			<p data-form-error style="display: none" aria-hidden="true" aria-errormessage> Oops! Something went wrong, please refresh and try again!<a href="/" class="close" data-button="close"><i class="fas fa-times"></i></a></p>
 		</div>
 	</div>
 	<img src="https://track.mailerlite.com/webforms/o/3910831/d8k4m2?v1618251185" width="1" height="1"

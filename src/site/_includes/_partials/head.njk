@@ -1,6 +1,5 @@
 
 <head>
-    <!-- META TAGS -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, user-scalable=yes, initial-scale=1, viewport-fit=cover">
     <meta name="description" content="{% if renderData.description or description %}{{ renderData.description or description }}{% endif %}">
@@ -8,38 +7,16 @@
     {% if nofollow %}
         <meta name="robots" content="noindex, nofollow">
     {% endif %}
-
-    <!-- PAGE TITLE -->
     <title>{{ title }}</title>
-
-    <!-- RESOURCE HINTS -->
-
-    <!-- PRELOAD FILES -->
     {% include "_partials/preload-styles.njk" %}
-
-    <!-- STYLESHEET -->
     {% include "_partials/styles.njk" %}
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" />
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">	
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <!-- SITEMAP -->
-
-    <!-- MANIFEST -->
-
     <link rel="alternate" href="{{settings.url}}/" hreflang="en-gb">
     <link rel="canonical" href="{{settings.url}}{{page.url}}">
-
-    <!-- FAVICONS -->
 		<link rel="shortcut icon" type="image/jpg" href="/images/favicon.png"/>
-
-    <!-- APPLE ICONS -->
-
-    <!-- APPLE SPLASH SCREENS -->
-
-    <!-- MS TILE ICONS -->
-
-    <!-- JAVASCRIPT -->
      {% include "_partials/scripts.njk" %}
 </head>

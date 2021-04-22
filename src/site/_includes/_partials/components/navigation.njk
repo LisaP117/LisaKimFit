@@ -1,27 +1,27 @@
 <div class="navigation__wrapper">
 	<nav class="navigation__bar">
-		<ul class="navigation__list navigation__list--desktop">
+		<ul class="navigation__list navigation__list--desktop" aria-role="menu">>
 			{% for item in settings.navigation %}
-				<li class="navigation__listItem" data-link="{{item.ref}}">{{item.title}}</li>
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem">{{item.title}}</li>
 			{% endfor %}
 		</ul>
 		<ul class="navigation__list navigation__list--socials">
 			<li class="navigation__listItem">
-				<a href="http://www.instagram.com/lisakimfit" target="_blank" title="Instagram lisa kim fit">
+				<a href="http://www.instagram.com/lisakimfit" target="_blank" title="Instagram lisa kim fit" aria-role="link" rel="noreferrer">
 					<i class="fab fa-instagram"></i>
 				</a>
 			</li>
 			<li class="navigation__listItem">
-				<a href="http://www.facebook.com/lisakimfit" target="_blank" title="Facebook lisa kim fit">
+				<a href="http://www.facebook.com/lisakimfit" target="_blank" title="Facebook lisa kim fit" aria-role="link" rel="noreferrer">
 					<i class="fab fa-facebook"></i>
 				</a>
 			</li>
 		</ul>
 		<div class="mobile-menu__iconWrap">
-			<span class="mobile-menu__iconOpen show" data-menu-button="open">
+			<span class="mobile-menu__iconOpen show" data-menu-button="open" aria-role="button">
 				<i class="fas fa-bars"></i>
 			</span>
-			<span class="mobile-menu__iconClose hide" data-menu-button="close">
+			<span class="mobile-menu__iconClose hide" data-menu-button="close" aria-role="button">
 				<i class="fas fa-times"></i>
 			</span>
 		</div>

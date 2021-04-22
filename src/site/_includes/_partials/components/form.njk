@@ -11,32 +11,32 @@
 					<div class="ml-form-align-center">
 						<div class="ml-form-embedWrapper embedForm">
 							<div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-								<form class="ml-block-form form" data-component="form" action="https://static.mailerlite.com/webforms/submit/w3f0p2" data-code="w3f0p2" method="post" target="_blank">
+								<form class="ml-block-form form" data-component="form" action="https://static.mailerlite.com/webforms/submit/w3f0p2" data-code="w3f0p2" method="post" target="_blank" aria-label="contact-form">
 									<div class="ml-form-formContent ml-form-fieldRow" data-fieldset-wrap>
 										<span class="disclaimer"><small>* required field</small></span>
 										{% for field in contact.fields %}
 										<fieldset class="ml-field-group {% if field.id == 'message' %}ml-field-company{% else %}ml-field-{{field.id}}{% endif %} ml-validate-{{field.id}} ml-validate-required form__field" data-fieldset>
 											<label for="{{field.id}}"><span data-label-text class="noError">{{field.name}}* <i class="far fa-check-circle hide"
-														data-field-complete></i></span> <span class="hide" data-field-error><i
+														data-field-complete aria-hidden="true"></i></span> <span class="hide" data-field-error aria-errormessage aria-hidden="true"><i
 														class="fas fa-exclamation-circle"></i>Please enter a valid {{field.id}}</span></label>
 											{% if 'textarea' in field.type %}
 											<textarea name="fields[company]" id="{{field.id}}" class="form-control" data-inputmask="" data-input rows="5" placeholder="{{field.placeholder}}"></textarea>
 											{% else %}
 											<input name="fields[{{field.id}}]" type="{{field.type}}" id="{{field.id}}" class="form-control" data-inputmask="" data-input placeholder="{{field.placeholder}}"
-												{{ 'required' if 'true' in field.isRequired }} noError aria-label="{{field.id}}" />
+												{{ 'required' if 'true' in field.isRequired }} noError" />
 											{% endif %}
 										</fieldset>
 										{% endfor %}
 									</div>
 									<input type="hidden" name="ml-submit" value="1">
 									<fieldset class="form__field ml-form-embedSubmit">
-										<input class="form__field__submit disabled primary" data-submit-button type="submit" value="SEND">
+										<input class="form__field__submit disabled primary" data-submit-button type="submit" value="SEND" aria-disabled="true" aria-role="button">
 									</fieldset>
 								</form>
-								<div class="form__messages ml-form-successBody ml-form-successContent row-success" id="data-form-submitted" data-form-submitted style="display: none;">
-									<p data-form-success style="display: none"> Thank you for your message, I'll get back to you soon. Keep an eye on your
+								<div class="form__messages ml-form-successBody ml-form-successContent row-success" id="data-form-submitted" data-form-submitted style="display: none;" aria-hidden="true">
+									<p data-form-success style="display: none" aria-hidden="true"> Thank you for your message, I'll get back to you soon. Keep an eye on your
 										emails. </p>
-									<p data-form-error style="display: none"> Oops! Something went wrong, please refresh and try again!
+									<p data-form-error style="display: none" aria-hidden="true" aria-errormessage> Oops! Something went wrong, please refresh and try again!
 										<span class="close" data-button="close"><i class="fas fa-times"></i></span>
 									</p>
 								</div>

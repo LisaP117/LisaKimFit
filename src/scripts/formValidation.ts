@@ -8,6 +8,8 @@ const formValidation = (form: HTMLFormElement) => {
 	const closeStatusMessages = () => {
 		errorMessage.style.display = 'none';
 		submitted.style.display = 'none';
+		errorMessage.setAttribute('aria-hidden', 'true');
+		submitted.setAttribute('aria-hidden', 'true');
 	}
 
 	const closeErrorMessage = (errorMessage: HTMLElement) => {
@@ -17,6 +19,7 @@ const formValidation = (form: HTMLFormElement) => {
 
 	const setStatusMessage = (response: Response) => {
 		submitted.style.display = 'block';
+		submitted.setAttribute('aria-hidden', 'false');
 
 		if (response.status === 200) {
 			successMessage.style.display = 'flex';
@@ -24,6 +27,7 @@ const formValidation = (form: HTMLFormElement) => {
 			submitted.classList.add('submitted');
 		} else {
 			errorMessage.style.display = 'flex';
+			errorMessage.setAttribute('aria-hidden', 'false');
 			closeErrorMessage(errorMessage);
 		}
 	}
@@ -67,21 +71,26 @@ const formValidation = (form: HTMLFormElement) => {
 
 		if (completedArray.length === fieldsetArray.length) {
 			formSubmit.classList.remove('disabled');
+			formSubmit.setAttribute('aria-disabled', 'false');
 			formSubmit.addEventListener('click', handleSubmit);
 		} else {
 			formSubmit.classList.add('disabled');
+			formSubmit.setAttribute('aria-disabled', 'true');
 		}
 	}
 
 	const errors = (error: HTMLElement, labelText: HTMLElement) => {
 		error.classList.remove('hide');
 		labelText.classList.remove('noError');
+		error.setAttribute('aria-hidden', 'false');
 	}
 
 	const success = (error: HTMLElement, labelText: HTMLElement, complete: HTMLElement, fieldset: HTMLElement) => {
 		error.classList.add('hide');
+		error.setAttribute('aria-hidden', 'true');
 		labelText.classList.add('noError');
 		complete.classList.remove('hide');
+		complete.setAttribute('aria-hidden', 'false');
 		fieldset.classList.add('completed');
 	}
 

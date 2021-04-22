@@ -1,7 +1,7 @@
 <header data-component="header">
 	<div class="container">
 		<div class="header-logo">
-			<a href="/" class="header-logo__link" data-logo>
+			<a href="/" class="header-logo__link" data-logo aria-role="link">
 				<svg class="header-logo__icon" width="150" height="75" viewBox="0 0 102 47.24" aria-describedby="logo">
 					<title id="logo">Lisa Kim Fit</title>
 					<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/LKFW.svg" width="100%"
@@ -11,10 +11,10 @@
 		</div>
 		{% include "_partials/components/navigation.njk" %}
 	</div>
-	<div class="navigation__mobile navigation__mobile--closed" data-menu>
-		<ul class="navigation__list">
+	<div class="navigation__mobile navigation__mobile--closed" data-menu aria-expanded="false">
+		<ul class="navigation__list" aria-role="menu">
 			{% for item in settings.navigation %}
-			<li class="navigation__listItem" data-link="{{item.ref}}">{{item.title}}</li>
+			<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem">{{item.title}}</li>
 			{% endfor %}
 		</ul>
 	</div>
