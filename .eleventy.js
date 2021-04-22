@@ -16,7 +16,7 @@ module.exports = config => {
   config.setBrowserSyncConfig({
     callbacks: {
       ready: function (err, bs) {
-        const content_404 = fs.readFileSync('dist/404.html');
+        const content_404 = fs.readFileSync('dist/404/index.html');
 
         bs.addMiddleware('*', (req, res) => {
           res.write(content_404);
