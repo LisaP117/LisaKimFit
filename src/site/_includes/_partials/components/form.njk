@@ -16,9 +16,13 @@
 										<span class="disclaimer"><small>* required field</small></span>
 										{% for field in contact.fields %}
 										<fieldset class="ml-field-group {% if field.id == 'message' %}ml-field-company{% else %}ml-field-{{field.id}}{% endif %} ml-validate-{{field.id}} ml-validate-required form__field" data-fieldset>
-											<label for="{{field.id}}"><span data-label-text class="noError">{{field.name}}* <i class="far fa-check-circle hide"
-														data-field-complete aria-hidden="true"></i></span> <span class="hide" data-field-error aria-errormessage aria-hidden="true"><i
-														class="fas fa-exclamation-circle"></i>Please enter a valid {{field.id}}</span></label>
+											<label for="{{field.id}}">
+												<span data-label-text class="noError">{{field.name}}*
+													<i class="far fa-check-circle hide" data-field-complete aria-hidden="true"></i>
+												</span>
+												<span class="hide" data-field-error aria-errormessage aria-hidden="true">
+													<i class="fas fa-exclamation-circle"></i>Please enter a valid {{field.id}}</span>
+											</label>
 											{% if 'textarea' in field.type %}
 											<textarea name="fields[company]" id="{{field.id}}" class="form-control" data-inputmask="" data-input rows="5" placeholder="{{field.placeholder}}"></textarea>
 											{% else %}
@@ -37,7 +41,7 @@
 									<p data-form-success style="display: none" aria-hidden="true"> Thank you for your message, I'll get back to you soon. Keep an eye on your
 										emails. </p>
 									<p data-form-error style="display: none" aria-hidden="true" aria-errormessage> Oops! Something went wrong, please refresh and try again!
-										<span class="close" data-button="close"><i class="fas fa-times"></i></span>
+										<span class="close" data-button="close" aria-role="button"><i class="fas fa-times"></i></span>
 									</p>
 								</div>
 							</div>

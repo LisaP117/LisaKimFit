@@ -4,7 +4,7 @@
 	<p>{{ newsletter.body }}</p>
 	<div class="newsletter__embedd-wrapper ml-form-embedWrapper embedForm ml-form-embedBody ml-form-embedBodyHorizontal row-form ml-form-align-center">
 		<div class="ml-form-embedContent" style="margin-bottom:0"></div>
-		<form class="newsletter__form ml-block-form" data-component="form" action="https://static.mailerlite.com/webforms/submit/d8k4m2" data-code="d8k4m2" method="post" target="_blank">
+		<form class="newsletter__form ml-block-form" data-component="form" action="https://static.mailerlite.com/webforms/submit/d8k4m2" data-code="d8k4m2" method="post" target="_blank" aria-label="newsletter subscription form">
 			<div class="ml-form-formContent horozintalForm" data-fieldset-wrap>
 				{% for field in newsletter.fields %}
 				<div class="newsletter__form__field ml-field-group ml-field-name ml-validate-required" data-fieldset>
@@ -31,7 +31,7 @@
 		<div data-form-submitted class="newsletter__form__messages ml-form-successBody ml-form-successContent row-success" style="display: none;" aria-hidden="true">
 			<p data-form-success style="display: none" aria-hidden="true"> Thank you for subscribing. Make sure to add info@lisakimfit.com to your
 	contacts!</p>
-			<p data-form-error style="display: none" aria-hidden="true" aria-errormessage> Oops! Something went wrong, please refresh and try again!<a href="/" class="close" data-button="close"><i class="fas fa-times"></i></a></p>
+			<p data-form-error style="display: none" aria-hidden="true" aria-errormessage> Oops! Something went wrong, please refresh and try again!<span class="close" data-button="close" aria-role="button"><i class="fas fa-times"></i></span></p>
 		</div>
 	</div>
 	<img src="https://track.mailerlite.com/webforms/o/3910831/d8k4m2?v1618251185" width="1" height="1"

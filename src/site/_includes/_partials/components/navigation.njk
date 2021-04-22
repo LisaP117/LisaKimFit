@@ -1,6 +1,6 @@
 <div class="navigation__wrapper">
 	<nav class="navigation__bar">
-		<ul class="navigation__list navigation__list--desktop" aria-role="menu">>
+		<ul class="navigation__list navigation__list--desktop" aria-role="menu">
 			{% for item in settings.navigation %}
 				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem">{{item.title}}</li>
 			{% endfor %}
