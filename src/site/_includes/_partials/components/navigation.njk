@@ -5,7 +5,7 @@
 				{% if pagename %}
 					<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link" href="/" aria-role="link">{{item.title}}</a></li>
 				{% else %}
-					<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem">{{item.title}}</li>
+					<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link" href="#{{item.ref}}" aria-role="link">{{item.title}}</a></li>
 				{% endif %}
 			{% endfor %}
 		</ul>
