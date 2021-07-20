@@ -26,7 +26,7 @@
 		{
 			"id": "about",
 			"title": "Let's build your confidence & a can do attitude",
-			"body": "I want to help you build confidence, get over hurdles, reach your goals and lift some weight because you can. You are able. I have been lifting for over 6 years and it is such an incredible feeling. The strength our bodies have is suprising and we need to love and respect them more, they are our homes after all.",
+			"body": "I want to help you build confidence, get over hurdles, reach your goals and lift some weight because you can. We ARE all able. I have been lifting for over 6 years and it is such an incredible feeling. The strength our bodies have is suprising and we need to love and respect them more, they are our homes after all.",
 			"imagePosition": "default",
 			"image1": "/images/LisaKimFit-480w.jpg",
 			"image2": "/images/LisaKimFit-800w.jpg",
@@ -35,8 +35,8 @@
 		},
 		{
 			"id": "mission",
-			"title": "My Mission",
-			"body": "I am on a mission to get as many people to fall in love with resistance training and movement. I want you to see the value that training adds to your life. For far too long it has been seen as chore. Since when is looking after yourself a chore? It should be a priority. The mental and physical benefits are huge and I want everyone to experience them. It's never too late, please don't say that. You are more capable then you could imagine.",
+			"title": "The Mission",
+			"body": "I am on a mission to get as many people to fall in love with resistance training and movement. I want you to see the value that training adds to your life. For far too long it has been seen as chore. Looking after yourself should be a priority. The mental and physical benefits are huge and I want everyone to experience them. It's never too late. You ARE more capable then you could imagine.",
 			"imagePosition": "reverse",
 			"image1": "/images/LisaKimFitSledPush-480w.jpg",
 			"image2": "/images/LisaKimFitSledPush-800w.jpg",
@@ -45,7 +45,7 @@
 		},
 		{
 			"id": "testimonials",
-			"title": "Some kind words from my clients",
+			"title": "What my clients say",
 			"quotes": [
 				{
 					"quote": "I've gained so much confidence and strength and even put on 3kg which may only be a small amount but it's more than i've managed before. I've also only felt confident to lift because of how attentitive you've been, ensuring my technique is right from all angles.",
@@ -63,8 +63,8 @@
 		},
 		{
 			"id": "services",
-			"title": "Personal Training",
-			"body": "In person training to help you on your way in your fitness journey. Whether that be just starting out or someone wanting to build on their strength. All sessions are fully tailored to help you achieve your goal. I ensure we set performance goals instead of physical goals, you'll find the journey is smoother. If you're interested and local I am based in Horwich.",
+			"title": "Personal Training Sessions & Prices",
+			"body": "In person training to help you on your way in your fitness journey, whether you are just starting out or someone wanting to build on their strength. All sessions are fully tailored to help you achieve your goal. I ensure we set performance goals instead of physical goals, you'll find the journey is smoother. If you're interested and local I am based in Horwich, Bolton.",
 			"list": [
 				{
 					"item": "20 minute call : FREE"
@@ -73,10 +73,16 @@
 					"item": "1 session : £30"
 				},
 				{
-					"item": "4 sessions : £100"
+					"item": "4 sessions p/m : £100"
 				},
 				{
-					"item": "8 sessions : £200"
+					"item": "8 sessions p/m : £200"
+				},
+				{
+					"item": "12 sessions p/m : £300"
+				},
+				{
+					"item": "Group PT (3 ppl) : Price on enquiry"
 				}
 			],
 			"disclaimer": "* All sessions MUST be taken within a month. Cancellations must be notified 24-48hrs prior to session otherwise you will be charged.",
@@ -88,20 +94,9 @@
 			"quote": "You don't have to sacrifice life to be fitter and healthier."
 		},
 		{
-			"id": "fightforfit",
-			"title": "Fight for Fit",
-			"body": "Fight for Fit is an online training program that is tailored to suit your needs. You will be amongst a group of people who will get tailored plans, weekly zoom check ins, recipe ideas and a whats app support group. You will be held accountable in this community but, you will win.",
-			"button": "Register my interest",
-			"imagePosition": "reverse",
-			"image1": "/images/coming-soon-480w.png",
-			"image2": "/images/coming-soon-800w.png",
-			"imageTitle": "New online personal training community coming soon",
-			"quote": "Restriction doesn't belong here, moderation and enjoyment does."
-		},
-		{
 			"id": "onlineTraining",
 			"title": "Online Training",
-			"body": "Online training is a tailored program adapted to you to allow you to reach your desired goals. You're the kind of person that knows what they're doing in a gym, has the drive and discipline but, just needs help with structuring your training.",
+			"body": "Online training is a tailored program adapted to you to allow you to reach your desired goals. You're the kind of person that knows what they're doing in a gym, has the drive and discipline but, needs help with structuring training sessions. You'll be required to check in and log your performance all on 1 app, it keeps you accontable.",
 			"button": "Register my interest",
 			"imagePosition": "none",
 			"image1": "/images/LisaKimFitProgress-480w.jpg",
