@@ -1,17 +1,12 @@
-{% if page.url ==  '/' %}
-	{% set pre = '#' %}
-{% else %}
-	{% set pre = '/#' %}
-{% endif %}
-
 <div class="navigation__wrapper">
 	<nav class="navigation__bar">
 		<ul class="navigation__list navigation__list--desktop" aria-role="menu">
 			{% for item in settings.navigation %}
-				{% if item.ref == 'services' %}
+				<!-- {% set pre = '/#' %} -->
+				{% if page.url == '/' %}
 					{% set pre = '#' %}
-				{% else %}
-					{% set pre = '/#' %}
+				{% elif page.url != 'cookie-policy' and item.ref == 'contact' %}
+					{% set pre = '#' %}
 				{% endif %}
 
 				{% if item.ref == 'services' %}

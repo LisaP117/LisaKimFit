@@ -14,7 +14,14 @@
 	<div class="navigation__mobile navigation__mobile--closed" data-menu aria-expanded="false">
 		<ul class="navigation__list" aria-role="menu">
 			{% for item in settings.navigation %}
-			{% if item.ref == 'services' %}
+				{% set pre = '/#' %}
+				{% if page.url == '/' %}
+					{% set pre = '#' %}
+				{% elif page.url != 'cookie-policy' and item.ref == 'contact' %}
+					{% set pre = '#' %}
+				{% endif %}
+
+				{% if item.ref == 'services' %}
 				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link"
 						href="/{{item.ref}}" aria-role="link">{{item.title}}</a></li>
 				{% else %}
