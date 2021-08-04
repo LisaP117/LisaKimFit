@@ -10,10 +10,6 @@
 			"ref": "about"
 		},
 		{
-			"title": "Mission",
-			"ref": "mission"
-		},
-		{
 			"title": "Services",
 			"ref": "services"
 		},
@@ -22,7 +18,7 @@
 			"ref": "contact"
 		}
 	],
-	"sections" : [
+	"home" : [
 		{
 			"id": "about",
 			"title": "Let's build your confidence & a can do attitude",
@@ -60,9 +56,11 @@
 					"author": "Henna C, Leicester"
 				}
 			]
-		},
+		}
+	],
+	"services": [
 		{
-			"id": "services",
+			"id": "personalTraining",
 			"title": "Personal Training Sessions & Prices",
 			"body": "In person training to help you on your way in your fitness journey, whether you are just starting out or someone wanting to build on their strength. All sessions are fully tailored to help you achieve your goal. I ensure we set performance goals instead of physical goals, you'll find the journey is smoother. If you're interested and local I am based in Horwich, Bolton.",
 			"list": [
@@ -169,7 +167,7 @@
 		{
 			"id": "errorpage",
 			"title": "404 Page Error",
-			"body": "Sorry we can't find the page you are looking for. Return to the "
+			"body": "Sorry we can't find the page you are looking for. Return to the homepage."
 		}
 	]
 }

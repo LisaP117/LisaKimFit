@@ -1,11 +1,24 @@
+{% if page.url ==  '/' %}
+	{% set pre = '#' %}
+{% else %}
+	{% set pre = '/#' %}
+{% endif %}
+
 <div class="navigation__wrapper">
 	<nav class="navigation__bar">
 		<ul class="navigation__list navigation__list--desktop" aria-role="menu">
 			{% for item in settings.navigation %}
-				{% if pagename %}
-					<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link" href="/" aria-role="link">{{item.title}}</a></li>
+				{% if item.ref == 'services' %}
+					{% set pre = '#' %}
 				{% else %}
-					<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link" href="#{{item.ref}}" aria-role="link">{{item.title}}</a></li>
+					{% set pre = '/#' %}
+				{% endif %}
+
+				{% if item.ref == 'services' %}
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link"
+						href="/{{item.ref}}" aria-role="link">{{item.title}}</a></li>
+				{% else %}
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link" href="{{pre}}{{item.ref}}" aria-role="link">{{item.title}}</a></li>
 				{% endif %}
 			{% endfor %}
 		</ul>

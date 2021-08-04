@@ -1,4 +1,10 @@
-{% for section in settings.sections %}
+{% if tags == 'home' %}
+	{% set data = settings.home %}
+{% else %}
+	{% set data = settings.services %}
+{% endif %}
+
+{% for section in data %}
 <div class="posts">
 	<section id="{{ section.id }}" class="section {% if section.imagePosition  == 'reverse' %}section__column--alignRight{% endif %}" aria-labelledby="{{ section.id }}">
 		<div class="section__row">
