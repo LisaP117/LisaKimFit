@@ -167,7 +167,12 @@ i.fas {
 	position: relative;
 }
 
-[data-button] { cursor: pointer }
+.cta {
+	display: inline-block;
+}
+
+[data-button],
+.cta { cursor: pointer }
 
 [data-field-error] {
 	@include flexbox(row, center, center);
@@ -426,7 +431,8 @@ header {
 			border-radius: 8px;
 		}
 
-		button[data-contact-button] {
+		button[data-contact-button],
+		.cta {
 			@extend %input;
 			@extend %submit;
 			width: auto;

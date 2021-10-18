@@ -7,6 +7,7 @@ module.exports = config => {
 
   // Passthrough copy
   config.addPassthroughCopy({ 'src/images': 'images' });
+	config.addPassthroughCopy({ 'src/documents': 'documents' });
 
   if (prod) {
     config.addTransform('htmlmin', htmlMin);
