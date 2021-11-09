@@ -92,7 +92,7 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
   right: 0;
 	background: $primary-coral;
 	color: $white;
-	padding: 1px 15px;
+	padding: 0 15px;
 	margin: 10px auto 0;
 	border-radius: 4px;
 	p { 
@@ -158,6 +158,7 @@ p > a {
 
 i.hide,
 .hide,
+a.hide,
 [data-field-complete] { display: none; }
 
 i.fab,
@@ -174,7 +175,7 @@ i.fas {
 [data-button],
 .cta { cursor: pointer }
 
-[data-field-error] {
+[data-field-error]{
 	@include flexbox(row, center, center);
 	margin-bottom: 15px;
 	padding: 3px 10px;
@@ -378,7 +379,7 @@ header {
 			-ms-transform: skewY(2deg);
 			-o-transform: skewY(2deg);
 			transform: skewY(2deg);
-			background: $white;
+			background: $altBg;
 		}
 	}
 
@@ -390,14 +391,14 @@ header {
 			-ms-transform: skewY(-2deg);
 			-o-transform: skewY(-2deg);
 			transform: skewY(-2deg);
-			background: $altBg;
+			background: $white;
 		}
 	}
 }
 
 @media screen and (min-width: 900px) {
 	.posts:last-child {
-		padding: 75px 0;
+		padding: 0 0 75px;
 		.section {
 			margin-bottom: 0;
 		}
@@ -614,6 +615,10 @@ header {
 	padding: 55px 20px;
 	@include flexbox(column, space-between, center);
 	position: relative;
+
+	&--pdfguide {
+		background: $altBg;
+	}
 	
 	&__embedd-wrapper {
 		width: 100%;

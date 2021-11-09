@@ -20,7 +20,6 @@ const formValidation = (form: HTMLFormElement) => {
 	const setStatusMessage = (response: Response) => {
 		submitted.style.display = 'block';
 		submitted.setAttribute('aria-hidden', 'false');
-
 		if (response.status === 200) {
 			successMessage.style.display = 'flex';
 			form.style.display = 'none';
@@ -44,7 +43,7 @@ const formValidation = (form: HTMLFormElement) => {
 			data.push({ input: field.value })
 		}
 
-		if (form.classList.contains('form__newsletter')) {
+		if (form.classList.contains('newsletter__form')) {
 			bodyText = JSON.stringify(data)
 		} else {
 			bodyText = new URLSearchParams(formData).toString()
@@ -113,7 +112,7 @@ const formValidation = (form: HTMLFormElement) => {
 			}
 		}
 
-		if (elemId.indexOf("email") > -1) {
+		if (elemId.indexOf("email") > -1 || elemId.indexOf("mce-EMAIL") > -1) {
 			const emailTest = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(elem.value);
 			if (emailTest === false) {
 				errors(elem, error, labelText);

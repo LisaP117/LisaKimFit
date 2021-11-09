@@ -11,21 +11,67 @@ tags: pdf
 			<section id="pdf" class="section" aria-labelledby="pdf">
 				<div class="section__row">
 					<div class="section__column section__column--solo">
-						<h2>Food Guide</h2>
-						<p>Here is a 46 page food guide I have created for you. It is not a meal plan. I do not believe in meal plans. The purpose
-							of the guide is to give you, recipe inspiration, examples of mix and matching foods, eating out guides and
-							ready meal options. There are sections dedicated to educating you on how to eat when you are ill, are on your menstrual cycle,
-							or are suffering from PCOS, Endometriosis and Menopause. 
-						</p>
-						<p>
-							There are 31 recipes to choose from, a spices and marinades section and snack ideas under a 100 calories.
-						</p>
-						<a class="section__cta cta" href="https://lisakimfit.s3.eu-west-1.amazonaws.com/LKFGuide.pdf" target="_blank">Download Guide</a>
+						<h2>The Notorious Food Guide</h2>
+					</div>
+				</div>
+				<div class="section__row">
+					<div class="section__column">
+						<ul class="section__list">
+							<li><span class="highlight"><strong>31</strong></span> Breakfast, lunch, dinner and, snack recipes</li> 
+							<li>Knowledge and advice (eating when ill, Menopause, Menstrual cycle, PCSO...)</li>
+							<li>Eating out guidance from your popular take aways / restaurants</li>
+							<li>A guide to alcohol</li>
+							<li>Ready meal examples from the supermarkets</li>
+							<li>Vegan alternatives</li>
+							<li>Sweet, savoury and, protein snack ideas</li>
+							<li>Examples of mix and matching foods to create meals</li>
+							<li>Spices and marinades recipes</li>
+						</ul>
+					</div>
+					<div class="section__column">
+						<img srcset="/images/foodguideshot-800.jpg 480w,/images/foodguideshot-480.jpg 800w"
+							sizes="(max-width: 800px) 480px, 800px"
+							src="/images/foodguideshot-480.jpg"
+							alt="screenshot of a breakfast recipe from the food guide">
 					</div>
 				</div>
 			</section>
+			<div class="divider"></div>
 		</div>
-		{% include "_partials/components/form.njk" %}
-		{% include "_partials/components/newsletter.njk" %}
+		<div class="posts newsletter newsletter--pdfguide">
+			<h2>Show me the download button!</h2>
+			<!-- Begin Mailchimp Signup Form -->
+				<div id="mc_embed_signup">
+					<form id="mc-embedded-subscribe-form" class="newsletter__form ml-block-form" data-component="form" action="https://lisakimfit.us5.list-manage.com/subscribe/post?u=f9a8f176416a474cfe80307f2&amp;id=963e49e33f" method="post" target="_blank" aria-label="download pdf form">
+						<div class="ml-form-formContent horozintalForm" id="mc_embed_signup_scroll" data-fieldset-wrap>
+							<div class="newsletter__form__field ml-field-group ml-field-name ml-validate-required" data-fieldset>
+								<label for="mce-EMAIL">
+									<span data-label-text class="noError">
+										Email Address*
+										<i class="far fa-check-circle hide" data-field-complete aria-hidden="true"></i>
+									</span>
+									<span class="hide" data-field-error aria-errormessage aria-hidden="true">
+										<i class="fas fa-exclamation-circle"></i>
+										Please enter a valid email
+									</span>
+								</label>
+								<input type="email" value="" name="mce-EMAIL" id="mce-EMAIL" class="required email form-control" data-inputmask data-input placeholder="Email Address">
+							</div>
+							<div class="newsletter__form__field ml-button-horizontal primary labelsOn">
+								<button class="newsletter__form__field__submit primary disabled" type="submit" value="submit" data-submit-button aria-disabled="true" aria-role="button" aria-invalid="false">Subscribe</button>
+							</div>
+						</div>
+						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						<div style="position: absolute; left: -5000px;" aria-hidden="true">
+							<input type="text" name="b_f9a8f176416a474cfe80307f2_963e49e33f" tabindex="-1" value="">
+						</div>
+					</form>
+					<div data-form-submitted class="newsletter__form__messages ml-form-successBody ml-form-successContent row-success" style="display: none;" aria-hidden="true">
+						<p data-form-success style="display: none" aria-hidden="true"> Thank you for subscribing. Here's the link to the PDF food guide. <a class="section__cta cta pdf-cta hide" href="https://lisakimfit.s3.eu-west-1.amazonaws.com/LKFGuide.pdf" target="_blank">Download Guide</a></p>
+						<p data-form-error style="display: none" aria-hidden="true" aria-errormessage> Oops! Something went wrong, please refresh and try again!<span class="close" data-button="close" aria-role="button"><i class="fas fa-times"></i></span></p>
+					</div> 
+				</div>
+				<!--End mc_embed_signup-->
+		</div>
 	</article>
 </main>
