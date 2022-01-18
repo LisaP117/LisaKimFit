@@ -24,7 +24,6 @@ const formValidation = (form: HTMLFormElement) => {
 			successMessage.style.display = 'flex';
 			form.style.display = 'none';
 			submitted.classList.add('submitted');
-			console.log(response)
 		} else {
 			errorMessage.style.display = 'flex';
 			errorMessage.setAttribute('aria-hidden', 'false');
