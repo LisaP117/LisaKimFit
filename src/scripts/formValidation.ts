@@ -57,7 +57,7 @@ const formValidation = (form: HTMLFormElement) => {
 			headers: { 
 				'Access-Control-Allow-Credentials': 'true',
 				'Access-Control-Allow-Methods': 'GET, OPTIONS, POST, PUT',
-				'Access-Control-Allow-Origin': 'http://localhost:8080',
+				'Access-Control-Allow-Origin': 'https://lisakimfit.com/',
 				'Access-Control-Max-Age': '600',
 				'Accept': 'application/x-www-form-urlencoded;charset=UTF-8',
 				'Content-Type': 'application/x-www-form-urlencoded'
