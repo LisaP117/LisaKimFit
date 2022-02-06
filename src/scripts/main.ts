@@ -70,6 +70,12 @@ observe((element: HTMLElement) => {
 }, document.querySelectorAll('[data-component="form"]'));
 
 observe((element: HTMLElement) => {
+	import(/* webpackChunkName: "form validation" */ 'Src/scripts/newsletterForm')
+		.then(module => initModule(module, element))
+		.catch(err => console.error(`Error in: Forms - ${err}`));
+}, document.querySelectorAll('[data-component="ns__form"]'));
+
+observe((element: HTMLElement) => {
 	import(/* webpackChunkName: "scroll to form" */ 'Src/scripts/scrollToForm')
 		.then(module => initModule(module, element))
 		.catch(err => console.error(`Error in: Scroll to form - ${err}`));

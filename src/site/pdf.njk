@@ -1,7 +1,7 @@
 ---
 title: 'Lisa Kim Fit - Horwich Bolton Personal Trainer (PT)'
 description: 'Horwich Bolton Personal training, no nonesense approach, helping you to reach your goals or get started on your fitness journey'
-layout: _layouts/page
+layout: page
 tags: pdf
 ---
 
@@ -39,39 +39,47 @@ tags: pdf
 			<div class="divider"></div>
 		</div>
 		<div class="posts newsletter newsletter--pdfguide">
-			<h2>Show me the download button!</h2>
-			<!-- Begin Mailchimp Signup Form -->
-				<div id="mc_embed_signup">
-					<form id="mc-embedded-subscribe-form" class="newsletter__form ml-block-form" data-component="form" action="https://lisakimfit.us5.list-manage.com/subscribe/post-json?u=f9a8f176416a474cfe80307f2&amp;id=963e49e33f&c=?" method="post" target="_blank" aria-label="download pdf form">
-						<div class="ml-form-formContent horozintalForm" id="mc_embed_signup_scroll" data-fieldset-wrap>
-							<div class="newsletter__form__field ml-field-group ml-field-name ml-validate-required" data-fieldset>
-								<label for="mce-EMAIL">
-									<span data-label-text class="noError">
-										Email Address*
-										<i class="far fa-check-circle hide" data-field-complete aria-hidden="true"></i>
-									</span>
-									<span class="hide" data-field-error aria-errormessage aria-hidden="true">
-										<i class="fas fa-exclamation-circle"></i>
-										Please enter a valid email
-									</span>
-								</label>
-								<input type="email" value="" name="mce-EMAIL" id="mce-EMAIL" class="required email form-control" data-inputmask data-input placeholder="Email Address">
-							</div>
-							<div class="newsletter__form__field ml-button-horizontal primary labelsOn">
-								<button class="newsletter__form__field__submit primary disabled" type="submit" value="submit" data-submit-button aria-disabled="true" aria-role="button" aria-invalid="false">Subscribe</button>
-							</div>
+			<h2>Yes please, send me the guide!</h2>
+				<!-- Begin Mailchimp Signup Form -->
+			<div id="mc_embed_signup" class="newsletter__embedd-wrapper row-form">
+				<form action="https://lisakimfit.us5.list-manage.com/subscribe/post?u=f9a8f176416a474cfe80307f2&amp;id=963e49e33f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter__form validate" target="_blank" novalidate data-component="ns__form">
+					<div id="mc_embed_signup_scroll" class="horizontalForm" data-fieldset-wrap>
+						<!-- <div class="indicates-required"><span class="asterisk">*</span> indicates required</div> -->
+						<div class="newsletter__form__field mc-field-group" data-fieldset>
+							<label for="mce-MMERGE1">Full Name
+								<span data-label-text class="noError req asterisk">*
+									<i class="far fa-check-circle hide" data-field-complete aria-hidden="true"></i>
+								</span>
+								<span class="hide" data-field-error aria-errormessage aria-hidden="true">
+									<i class="fas fa-exclamation-circle"></i>Please enter a valid name
+								</span>
+							</label>
+							<input type="text" value="" name="MMERGE1" class="required form-control" id="mce-MMERGE1" placeholder="Full Name" data-input>
 						</div>
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						<div style="position: absolute; left: -5000px;" aria-hidden="true">
-							<input type="text" name="b_f9a8f176416a474cfe80307f2_963e49e33f" tabindex="-1" value="">
+						<div class="newsletter__form__field mc-field-group" data-fieldset>
+							<label for="mce-EMAIL">Email Address
+								<span data-label-text class="noError req asterisk">*
+									<i class="far fa-check-circle hide" data-field-complete aria-hidden="true"></i>
+								</span>
+								<span class="hide" data-field-error aria-errormessage aria-hidden="true">
+									<i class="fas fa-exclamation-circle"></i>Please enter a valid email address
+								</span>
+							</label>
+							<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email Address" data-input>
 						</div>
-					</form>
-					<div data-form-submitted class="newsletter__form__messages ml-form-successBody ml-form-successContent row-success" style="display: none;" aria-hidden="true">
-						<p data-form-success style="display: none" aria-hidden="true"> Thank you for subscribing. Here's the link to the PDF food guide. <a class="section__cta cta pdf-cta hide" href="https://lisakimfit.s3.eu-west-1.amazonaws.com/LKFGuide.pdf" target="_blank">Download Guide</a></p>
-						<p data-form-error style="display: none" aria-hidden="true" aria-errormessage> Oops! Something went wrong, please refresh and try again!<span class="close" data-button="close" aria-role="button"><i class="fas fa-times"></i></span></p>
-					</div> 
-				</div>
-				<!--End mc_embed_signup-->
+						<div class="newsletter__form__field primary labelsOn">
+							<input data-submit-button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter__form__field__submit primary disabled button">
+						</div>
+					</div>
+					<div data-form-submitted id="mce-responses" class="newsletter__form__messages row-success">
+						<p data-form-success class="response" id="mce-success-response" style="display: none" aria-hidden="true"></p>
+						<p data-form-error class="response" id="mce-error-response" style="display: none" aria-hidden="true" aria-errormessage></p>
+					</div>   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+					<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f9a8f176416a474cfe80307f2_963e49e33f" tabindex="-1" value=""></div>
+				</form>
+			</div>
+			<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='MMERGE1';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+			<!--End mc_embed_signup-->
 		</div>
 	</article>
 </main>

@@ -693,7 +693,7 @@ header {
 			[data-form-submitted] {
 				min-width: 800px;
 				width: auto;
-				margin: 0 auto;
+				margin: 25px auto 0;
 				@include flexbox(row, space-between, center);
 			}
 			
@@ -708,6 +708,14 @@ header {
 			}
 		}
 	}
+}
+
+#mc_embed_signup div.mce_inline_error {
+	display:none!important;
+}
+
+#mc_embed_signup input.mce_inline_error {
+    border-color: red!important;
 }
 
 // footer

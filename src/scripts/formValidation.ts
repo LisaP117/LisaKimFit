@@ -43,12 +43,6 @@ const formValidation = (form: HTMLFormElement) => {
 			data.push({ input: field.value })
 		}
 
-		if (form.classList.contains('newsletter__form')) {
-			bodyText = JSON.stringify(data)
-		} else {
-			bodyText = new URLSearchParams(formData).toString()
-		}
-
 		e.preventDefault();
 
 		await fetch(url, {

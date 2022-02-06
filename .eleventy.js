@@ -35,6 +35,9 @@ module.exports = config => {
     passthroughFileCopy: true,
     dir: {
       input: 'src/site',
+			includes: "_includes",
+      layouts: "_includes/_layouts",
+      data: "_data",
       output: 'dist'
     }
   };

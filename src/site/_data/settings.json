@@ -130,23 +130,7 @@
 		{
 			"id": "newsletter",
 			"title": "Sign up to the newsletter",
-			"body": "Real and raw. For all things, training, nutrition hints & tips, recipes and personal experiences you can relate to.",
-			"fields": [
-				{
-					"id": "name",
-					"name": "Full Name",
-					"type": "text",
-					"placeholder": "Full Name",
-					"isRequired": "true"
-				},
-				{
-					"id": "email",
-					"name": "Email Address",
-					"type": "text",
-					"placeholder": "Email Address",
-					"isRequired": "true"
-				}
-			]
+			"body": "Real and raw. For all things, training, nutrition hints & tips, recipes and personal experiences you can relate to."
 		}
 	],
 	"errorpage": [
