@@ -168,10 +168,6 @@ i.fas {
 	position: relative;
 }
 
-.cta {
-	display: inline-block;
-}
-
 [data-button],
 .cta { cursor: pointer }
 
@@ -234,6 +230,10 @@ header {
 	height: 112px;
 	@include flexbox(row, space-between, center);
 	transition: height 0.5s ease;
+}
+
+.container--landing {
+	@include flexbox(column, space-evenly, center);
 }
 
 .main-content {
@@ -432,8 +432,7 @@ header {
 			border-radius: 8px;
 		}
 
-		button[data-contact-button],
-		.cta {
+		button[data-contact-button]{
 			@extend %input;
 			@extend %submit;
 			width: auto;
@@ -483,6 +482,71 @@ header {
 					@include flexbox(column, right, flex-end);
 				}
 			}
+		}
+	}
+}
+
+// linktree style section
+
+.section--linkto {
+	max-width: 680px;
+	.section {
+		&__column {
+			margin-top: 25px;
+			&__feature-image {
+				margin-bottom: 25px;
+				img {
+					border-radius: 50%;
+					width: 150px;
+					height: 150px;
+					display: block;
+					object-fit: contain;
+					object-position: initial;
+					filter: none;
+				}
+			}
+			&__cta-collection {
+				display: block;
+				position: relative;
+				.cta {
+					display: block;
+					padding: 15px;
+					margin-bottom: 15px;
+					border: 3px solid;
+					border-color: $primary-coral;
+					background: transparent;
+					text-align: center;
+					color: $primary-purple;
+					font-family: $title-font;
+					transition: all 0.5s ease;
+					&:hover {
+						background: $primary-coral;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+}
+
+.social-links__list {
+	@extend %listoverride;
+	@include flexbox(row, center, center);
+	font-size: 16px;
+	font-weight: bold;
+	i { 
+		font-size: 48px;
+		color: $primary-purple; 
+		transition: color 0.5s ease;
+	}
+
+	li:first-child {
+		margin-right: 15px;
+	}
+
+	a:hover {
+		i {
+			color: $primary-coral; 
 		}
 	}
 }
