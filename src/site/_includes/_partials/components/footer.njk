@@ -11,14 +11,14 @@
 					{% set pre = '/#' %}
 				{% endif %}
 				{% if item.ref == 'services' %}
-				<li class="footer__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="footer__link"
-						href="/{{item.ref}}" aria-role="link">{{item.title}}</a></li>
+				<li class="footer__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a data-link class="footer__link"
+						href="/{{item.ref}}" aria-role="link" title="{{item.title}}">{{item.title}}</a></li>
 				{% else %}
-				<li class="footer__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="footer__link" href="{{pre}}{{item.ref}}" aria-role="link">{{item.title}}</a></li>
+				<li class="footer__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a data-link class="footer__link" href="{{pre}}{{item.ref}}" aria-role="link" title="{{item.title}}">{{item.title}}</a></li>
 				{% endif %}
 
 			{% endfor %}
-				<li class="footer__listItem"><a class="footer__link" href="/cookie-policy" aria-role="link" aria-labelledby="cookie policy link">Cookie Policy</a></li>
+				<li class="footer__listItem"><a data-link class="footer__link" href="/cookie-policy" aria-role="link" aria-labelledby="cookie policy link" title="cookie policy">Cookie Policy</a></li>
 		</ul>
 		<p>Copyright &copy; Lisa Kim Fit 2021<br/>Website by <b>She Who Codes LTD</b></p>
 	</div>

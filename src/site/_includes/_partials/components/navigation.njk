@@ -10,21 +10,21 @@
 				{% endif %}
 
 				{% if item.ref == 'services' %}
-				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link"
-						href="/{{item.ref}}" aria-role="link">{{item.title}}</a></li>
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a data-link class="navigation__link"
+						href="/{{item.ref}}" aria-role="link" title="{{item.title}}">{{item.title}}</a></li>
 				{% else %}
-				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link" href="{{pre}}{{item.ref}}" aria-role="link">{{item.title}}</a></li>
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a data-link class="navigation__link" href="{{pre}}{{item.ref}}" aria-role="link" title="{{item.title}}">{{item.title}}</a></li>
 				{% endif %}
 			{% endfor %}
 		</ul>
 		<ul class="navigation__list navigation__list--socials">
 			<li class="navigation__listItem">
-				<a href="http://www.instagram.com/lisakimfit" target="_blank" title="Instagram lisa kim fit" aria-role="link" rel="noreferrer">
+				<a href="http://www.instagram.com/lisakimfit" target="_blank" data-link title="Instagram lisa kim fit" aria-role="link" rel="noreferrer">
 					<i class="fab fa-instagram"></i>
 				</a>
 			</li>
 			<li class="navigation__listItem">
-				<a href="http://www.facebook.com/lisakimfit" target="_blank" title="Facebook lisa kim fit" aria-role="link" rel="noreferrer">
+				<a href="http://www.facebook.com/lisakimfit" target="_blank" data-link title="Facebook lisa kim fit" aria-role="link" rel="noreferrer">
 					<i class="fab fa-facebook"></i>
 				</a>
 			</li>

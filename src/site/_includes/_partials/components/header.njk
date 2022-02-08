@@ -1,7 +1,7 @@
 <header data-component="header">
 	<div class="container">
 		<div class="header-logo">
-			<a href="/" class="header-logo__link" data-logo aria-role="link">
+			<a href="/" class="header-logo__link" data-logo aria-role="link" data-link title="home via logo">
 				<svg class="header-logo__icon" width="150" height="75" viewBox="0 0 102 47.24" aria-describedby="logo">
 					<title id="logo">Lisa Kim Fit</title>
 					<image xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/images/LKFW.svg" width="100%"
@@ -22,10 +22,10 @@
 				{% endif %}
 
 				{% if item.ref == 'services' %}
-				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link"
-						href="/{{item.ref}}" aria-role="link">{{item.title}}</a></li>
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a data-link class="navigation__link"
+						href="/{{item.ref}}" aria-role="link" title="{{item.title}}">{{item.title}}</a></li>
 				{% else %}
-				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a class="navigation__link" href="#{{item.ref}}" aria-role="link">{{item.title}}</a></li>
+				<li class="navigation__listItem" data-link="{{item.ref}}" aria-role="menuitem"><a data-link class="navigation__link" href="#{{item.ref}}" aria-role="link" title="{{item.title}}">{{item.title}}</a></li>
 				{% endif %}
 			{% endfor %}
 		</ul>

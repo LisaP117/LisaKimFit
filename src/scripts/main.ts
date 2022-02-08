@@ -81,4 +81,10 @@ observe((element: HTMLElement) => {
 		.catch(err => console.error(`Error in: Scroll to form - ${err}`));
 }, document.querySelectorAll('[data-contact-button]'));
 
+observe((element: HTMLElement) => {
+	import(/* webpackChunkName: "scroll to form" */ 'Src/scripts/linkTracking')
+		.then(module => initModule(module, element))
+		.catch(err => console.error(`Error in: Scroll to form - ${err}`));
+}, document.querySelectorAll('a[data-link]'));
+
 export { };

@@ -9,6 +9,8 @@ const scrollToForm = (button: HTMLButtonElement) => {
 				block: "start",
 				inline: "nearest"
 			});
+
+			//ga('send', 'event', 'scroll to', 'click', 'contact form');
 		}
 
 	}

@@ -25,6 +25,10 @@
       ]
     }
   },
+	// "types": [
+	// 	"node",
+	// 	"google.analytics",
+	// ],
   "include": [
     "src"
   ],
@@ -32,3 +36,7 @@
     "node_modules"
   ]
 }
+
+// declare module 'googleAnalytics' {
+//   export = GA;
+// }

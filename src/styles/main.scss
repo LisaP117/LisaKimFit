@@ -1,6 +1,6 @@
 $font-stack: "Questrial", sans-serif;;
 $title-font: Impact, 	sans-serif;
-$primary-purple: #392033;
+$primary-purple: #21121d;
 $primary-coral: #FD6051;
 $white: #FFFFFF;
 $black: #000000;
@@ -244,18 +244,27 @@ header {
 	transition: width 0.5s ease;
 }
 
+.header--landing {
+	opacity: 1;
+	transition: opacity 0.5s ease;
+	&.isScrolled {
+		opacity: 0;
+	}
+}
+
 .isScrolled {
-	.container {
+	.container:not(.container--landing) {
 		height: 82px;
-	}	
 
-	.header-logo__icon {
-		width: 70%;
+		.header-logo__icon {
+			width: 70%;
+		}
+
+		.navigation__mobile {
+			top: 82px;
+		}
 	}
 
-	.navigation__mobile {
-		top: 82px;
-	}
 }
 
 // Navigation
