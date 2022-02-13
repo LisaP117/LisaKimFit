@@ -87,4 +87,10 @@ observe((element: HTMLElement) => {
 		.catch(err => console.error(`Error in: Scroll to form - ${err}`));
 }, document.querySelectorAll('a[data-link]'));
 
+// observe((element: HTMLElement) => {
+// 	import(/* webpackChunkName: "scroll to form" */ 'Src/scripts/showOverlayOnLeave')
+// 		.then(module => initModule(module, element))
+// 		.catch(err => console.error(`Error in: Scroll to form - ${err}`));
+// }, document.querySelectorAll('[data-form-overlay]'));
+
 export { };
