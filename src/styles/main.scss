@@ -492,7 +492,6 @@ h2.titles {
 				background: $primary-purple;
 			}
 		}
-
 	}
 }
 
@@ -511,6 +510,10 @@ h2.titles {
 		&__row {
 			@include flexbox(row, space-evenly, center);
 			overflow: hidden;
+		}
+
+		&__list {
+			margin-bottom: 38px;
 		}
 
 		&__column {
