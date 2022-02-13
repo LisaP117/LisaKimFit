@@ -64,32 +64,35 @@
 	],
 	"services": [
 		{
-			"id": "personalTraining",
-			"title": "Personal Training",
-			"body": "In person training to help you on your way in your fitness journey, whether you are just starting out or someone wanting to build on their strength. All sessions are fully tailored to help you achieve your goal. I ensure we set performance goals instead of physical goals, you'll find the journey is smoother. I will also provide you with nutrion guidance and calculate your calories. We'll take it step by step so that you aren't overwhelemed. If you're interested and local I coach at GSquared Health Clubs, St Annes Square, Manchester City Centre.",
+			"id": "contact",
+			"title": "Personal Coaching",
+			"body": "I can help you in person or online. If you want in person coaching you can find me at GSquared Health Clubs, St Annes Square, Manchester City Centre. How does it work?",
 			"list": [
 				{
-					"item": "Step 1: FREE 10 minute call"
+					"item": "Step 1: Fill out the suitability form."
 				},
 				{
-					"item": "Step 2: A consultation form will be sent out"
+					"item": "Step 2: FREE 10 minute call"
 				},
 				{
-					"item": "Step 3: Form reviewed and we will meet for an assessment"
+					"item": "Step 3: Fill out the consultation form"
 				},
 				{
-					"item": "Step 4: A tailored program will be written"
+					"item": "Step 4: Come down for a FREE movement assessment"
 				},
 				{
-					"item": "Step 5: Sessions begin!"
+					"item": "Step 5: A tailored program will be written"
+				},
+				{
+					"item": "Step 6: Let's get started!"
 				}
 			],
 			"disclaimer": "* All sessions MUST be taken within a month. Minimum 2 sessions per week. Cancellations must be notified 24hrs prior to session otherwise you will be charged.",
-			"button": "Register my interest",
 			"imagePosition": "none",
+			"button": "true",
 			"image1": "/images/jenbacksquat-480w.jpg",
 			"image2": "/images/jenbacksquat-800w.jpg",
-			"imageTitle": "Lisa Kim Fit personal training a client in the gym. Jen is performing a backsquat.",
+			"imageTitle": "Lisa Kim Fit personal coaching a client in the gym. Jen is performing a backsquat.",
 			"quote": "You don't have to sacrifice life to be fitter and healthier."
 		}
 	],
