@@ -10,8 +10,17 @@
 		<div class="section__row">
 			{% if section.id != 'testimonials' %}
 			<div class="section__column">
-				<h2>{{ section.title }}</h2>
-				<p>{{ section.body }}</p>
+				{% if section.titles %}
+					{% set length = section.titles.length if section.titles.length < 4 else 4 %} 
+						{% for i in range(0, length) %}
+						<h2 class="titles titles-{{[i]}}" data-section-title>{{ section.titles[i].title }}</h2>
+						{% endfor %}
+				{% else %}
+					<h2>{{ section.title }}</h2>
+				{% endif %}
+				{% if section.body %}
+					<p>{{ section.body }}</p>
+				{% endif %}
 
 				{% if section.list %}
 					<ul class="section__list">

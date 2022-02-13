@@ -110,13 +110,13 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 
 html {
 	height: 100%;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 body {
 	font-family: $font-stack;
   margin: 0;
-	line-height: 24px;
+	line-height: 28px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -414,6 +414,49 @@ header {
 	}
 }
 
+
+// titles in the first section
+@mixin fade-in($waitTime) {
+	animation: 
+		wait #{$waitTime},
+		fade-in 800ms #{$waitTime};
+}
+
+@keyframes wait {
+	0% { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+@keyframes fade-in {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@media screen and (min-width: 900px) {
+	h2.titles {
+		text-align: left;
+		padding: 0 90px 20px 0;
+	}
+}
+
+h2.titles {
+	padding: 0 0 20px 0;
+	opacity: 1;
+	text-align: center;
+	&:nth-child(2) {
+		@include fade-in('1500ms');
+	}
+
+	&:nth-child(3) {
+		@include fade-in('2500ms');
+	}
+
+	&:nth-child(4) {
+		@include fade-in('3500ms');
+		padding-bottom: 0;
+	}
+}
+
 // section block
 .section {
 	padding: 20px;
@@ -425,7 +468,7 @@ header {
 	}
 
 	&__column {
-		position: relative;
+		// position: relative;
 
 		&:nth-child(1) {
 			margin-bottom: 60px;
@@ -495,8 +538,17 @@ header {
 	}
 }
 
-// linktree style section
+#pdf {
+	h2 {
+		text-align: center;
+	}
+	.section__list {
+		margin-top: 36px;
+		@include flexbox(column, center, center);
+	}
+}
 
+// linktree style section
 .section--linkto {
 	max-width: 680px;
 	.section {
@@ -517,24 +569,26 @@ header {
 			&__cta-collection {
 				display: block;
 				position: relative;
-				.cta {
-					display: block;
-					padding: 15px;
-					margin-bottom: 15px;
-					border: 3px solid;
-					border-color: $primary-coral;
-					background: transparent;
-					text-align: center;
-					color: $primary-purple;
-					font-family: $title-font;
-					transition: all 0.5s ease;
-					&:hover {
-						background: $primary-coral;
-						color: $white;
-					}
-				}
 			}
 		}
+	}
+}
+
+// linktree style CTA
+.cta {
+	display: block;
+	padding: 15px;
+	margin-bottom: 15px;
+	border: 3px solid;
+	border-color: $primary-coral;
+	background: transparent;
+	text-align: center;
+	color: $primary-purple;
+	font-family: $title-font;
+	transition: all 0.5s ease;
+	&:hover {
+		background: $primary-coral;
+		color: $white;
 	}
 }
 
@@ -565,7 +619,7 @@ header {
 	&__wrapper {
 		blockquote {
 			font-family: $font-stack;
-			font-size: 16px;
+			font-size: 20px;
 
 			.quote {
 				@include flexbox(row, center, baseline);

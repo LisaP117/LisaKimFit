@@ -21,23 +21,27 @@
 	"home" : [
 		{
 			"id": "about",
-			"title": "The greatest investment is in yourself",
-			"body": "Have you ever felt like the gym isn't for you or that fitness just isn't your thing? Well, it is your thing. The gym is a safe space for everyone. Let me help you on your fitness journey where you will learn all the exercises and build the confidence to walk into a gym. There isn't a greater investement than in YOU and your current / future health",
+			"titles": [
+				{"title": "Are you ready to invest in yourself?"},
+				{"title": "Are you tired of dieting?"},
+				{"title": "Do you want to feel more confident?"},
+				{"title": "Are you struggling to find a balance?"}
+			],
 			"imagePosition": "default",
 			"image1": "/images/LisaKimFit-480w.jpg",
 			"image2": "/images/LisaKimFit-800w.jpg",
 			"imageTitle": "Lisa Kim Fit personal trainer",
-			"quote": "It's a continuous journey with endless achievements. Reaching your goal is just the start."
+			"quote": "To be able to achieve you must hold yourself accountable."
 		},
 		{
-			"id": "mission",
-			"title": "The Mission",
-			"body": "I am on a mission to get as many people to fall in love with resistance training and movement. I want you to see the value that training adds to your life. For far too long it has been seen as chore. Looking after yourself should be a priority. The mental and physical benefits are huge and I want everyone to experience them. It's never too late. You ARE more capable then you could imagine.",
+			"id": "help",
+			"title": "I want to help YOU",
+			"body": "Let me help you on your fitness journey where you will learn all the exercises and build the confidence, get to your goal AND eventually train in a gym on your own. There isn't a greater investement than in YOU and your current / future health.",
 			"imagePosition": "reverse",
 			"image1": "/images/LisaKimFitSledPush-480w.jpg",
 			"image2": "/images/LisaKimFitSledPush-800w.jpg",
 			"imageTitle": "Lisa Kim Fit personal trainer sled pushing during a workout",
-			"quote": "To be able to achieve you must hold yourself accountable."
+			"quote": "It's a continuous journey with endless achievements. Reaching your goal is just the start."
 		},
 		{
 			"id": "testimonials",
@@ -45,15 +49,15 @@
 			"quotes": [
 				{
 					"quote": "I've gained so much confidence and strength and even put on 3kg which may only be a small amount but it's more than i've managed before. I've also only felt confident to lift because of how attentitive you've been, ensuring my technique is right from all angles.",
-					"author": "Nisha P, Bolton"
+					"author": "Nisha Patel"
 				},
 				{
 					"quote": "I've been doing PT sessions with Lisa for a few months now and she's been amazing. I started off not being able to life and now I am deadlifting 60kg! I feel stronger than ever!",
-					"author": "Lauren C, Horwich"
+					"author": "Lauren Chadwick"
 				},
 				{
-					"quote": "I have been doing your saved online workuouts, I have been loving them. You really have helped me, if only you knew how much.",
-					"author": "Henna C, Leicester"
+					"quote": "I have been working with Lisa for just short of 2 years . When I came to Lisa I was struggling and kept picking up injuries as I’d suffered a serious knee injury. Through hard work and planning I’m as fit as I’ve ever been and been injury free. This is all down to Lisa’s hard work and knowledge and could not recommend her highly enough.",
+					"author": "Ryan Adderley"
 				}
 			]
 		}
@@ -92,38 +96,8 @@
 	"contact" : [
 		{
 			"id": "contact",
-			"title": "Contact",
-			"body": "If you have any questions, please fill out the form and I'll get back to you within 24-48hrs. Alternatively, you can contact me via instagram or facbook messenger.",
-			"fields": [
-				{
-					"id": "name",
-					"name": "Full Name",
-					"type": "text",
-					"placeholder": "Full Name",
-					"isRequired": "true"
-				},
-				{
-					"id": "email",
-					"name": "Email Address",
-					"type": "email",
-					"placeholder": "Email Address",
-					"isRequired": "true"
-				},
-				{
-					"id": "phone",
-					"name": "Phone Number",
-					"type": "number",
-					"placeholder": "Phone Number",
-					"isRequired": "true"
-				},
-				{
-					"id": "message",
-					"name": "Your Message",
-					"type": "textarea",
-					"placeholder": "I would like more information on [ choose service ] OR I would like a callback to discuss, please.",
-					"isRequired": "true"
-				}
-			]
+			"title": "Do you want my help?",
+			"body": "I want to help you. I have been where you have been. Whatever you are struggling with I am here to help, I will provide you with the tools, motivation, education and accountability to help you reach your goal. If you are ready to make that change please click to button and fill out the form. Look forward to working with you!"
 		}
 	],
 	"newsletter": [
