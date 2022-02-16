@@ -572,6 +572,10 @@ h2.titles {
 			&__cta-collection {
 				display: block;
 				position: relative;
+				&.cta {
+					font-size: 18px;
+					font-family: $title-font;
+				}
 			}
 		}
 	}
