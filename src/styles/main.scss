@@ -110,13 +110,13 @@ $gradient: linear-gradient(0.25turn, $primary-purple, $primary-coral);
 
 html {
 	height: 100%;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 body {
 	font-family: $font-stack;
   margin: 0;
-	line-height: 28px;
+	line-height: 26px;
 	font-weight: bold;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -900,6 +900,7 @@ h2.titles {
 // footer
 .footer {
 	background: $primary-purple;
+	font-size: 16px;
 	.container {
 		@include flexbox(column, flex-start, baseline);
 		height: auto;
