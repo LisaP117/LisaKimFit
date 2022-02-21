@@ -171,6 +171,21 @@ i.fas {
 [data-button],
 .cta { cursor: pointer }
 
+.button.close {
+	position: absolute;
+	top: 25px;
+  right: 5px;
+	cursor: pointer;
+	border: 0;
+	background: transparent;
+
+	i.fas.fa-times-circle {
+    color: #21121D;
+    font-size: 40px;
+	}
+
+}
+
 [data-field-error]{
 	@include flexbox(row, center, center);
 	margin-bottom: 15px;
@@ -208,9 +223,43 @@ blockquote {
 	}
 }
 
-.disclaimer {
-	font-size: 14px;
-	line-height: 1;
+.overlay__outer {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.3);
+	display: none;
+	.show {
+		display: block;
+	}
+}
+
+.overlay__inner {
+	padding: 20px 0;
+  position: fixed;
+	margin: 0 auto;
+	transform: translateY(20%);
+	transform: translateX(20%);
+
+	h2 {
+		text-align: center;
+    padding: 0;
+	}
+
+	.newsletter__form__field--submit {
+		max-width: 800px;
+    margin: 0 auto;
+	}
+
+}
+
+@media screen and (min-width: 900px) {
+	.overlay__inner {
+		width: 70%;
+	}
 }
 
 .page { position: relative; }
@@ -678,11 +727,6 @@ h2.titles {
 	background: $primary-purple;
 	border-radius: 5px;
 	position: relative;
-
-	.disclaimer {
-		color: $white;
-		padding-left: 15px;
-	}
 
 	&__field {
 		@include flexbox(column, flex-start, flex-start);

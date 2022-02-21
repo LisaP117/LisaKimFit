@@ -18,8 +18,15 @@
 				{% else %}
 					<h2>{{ section.title }}</h2>
 				{% endif %}
+
 				{% if section.body %}
 					<p>{{ section.body }}</p>
+				{% endif %}
+
+				{% if section.paragraphs %}
+					{% for item in section.paragraphs %}
+					<p>{{ item.para }}</p>
+					{% endfor %}
 				{% endif %}
 
 				{% if section.list %}
@@ -34,9 +41,6 @@
 					<a data-link class="cta" href="https://docs.google.com/forms/d/1qtXrOUcUF0ILLmO9AQ_7O5ELZOH6zkDUt08MOq7MgP4/" title="Enquiry form" aria-role="link" rel="noreferrer" target="_blank">I'm ready to start!</a>
 				{% endif %}
 
-				{% if section.disclaimer %}
-					<p class="disclaimer"><small>{{ section.disclaimer }}</small></p>
-				{% endif %}
 			</div>
 			<div class="section__column {% if section.imagePosition  == 'reverse' %}section__column--reverse{% endif %}">
 				{% if section.image1 %}

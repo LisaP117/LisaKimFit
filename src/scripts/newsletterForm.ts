@@ -1,4 +1,13 @@
+declare const Window: any;
 const newsletterForm = (form: HTMLFormElement) => {
+
+	const successResponse = () => {
+		const success: HTMLElement | any = document.querySelector('[data-form-success]');
+		if (success.style.display = 'flex') {
+			Window.gtag('send', 'event', 'newsletter', 'click', 'subscribed');
+			window.clearInterval();
+		}
+	}
 
 	const activateSubmitButton = () => {
 		const fieldsetArray: NodeList | any = form.querySelectorAll('[data-fieldset]');
@@ -12,6 +21,9 @@ const newsletterForm = (form: HTMLFormElement) => {
 			formSubmit.classList.add('disabled');
 			formSubmit.setAttribute('aria-disabled', 'true');
 		}
+
+		setInterval(successResponse, 1000);
+
 	}
 
 	const errors = (elem: HTMLInputElement, error: HTMLElement, labelText: HTMLElement) => {

@@ -64,13 +64,7 @@ observe((element: HTMLElement) => {
 }, document.querySelectorAll('li[data-link]'));
 
 observe((element: HTMLElement) => {
-	import(/* webpackChunkName: "form validation" */ 'Src/scripts/formValidation')
-		.then(module => initModule(module, element))
-		.catch(err => console.error(`Error in: Forms - ${err}`));
-}, document.querySelectorAll('[data-component="form"]'));
-
-observe((element: HTMLElement) => {
-	import(/* webpackChunkName: "form validation" */ 'Src/scripts/newsletterForm')
+	import(/* webpackChunkName: "newsletter form validation" */ 'Src/scripts/newsletterForm')
 		.then(module => initModule(module, element))
 		.catch(err => console.error(`Error in: Forms - ${err}`));
 }, document.querySelectorAll('[data-component="ns__form"]'));
@@ -82,9 +76,9 @@ observe((element: HTMLElement) => {
 }, document.querySelectorAll('[data-contact-button]'));
 
 observe((element: HTMLElement) => {
-	import(/* webpackChunkName: "scroll to form" */ 'Src/scripts/linkTracking')
+	import(/* webpackChunkName: "track links" */ 'Src/scripts/linkTracking')
 		.then(module => initModule(module, element))
-		.catch(err => console.error(`Error in: Scroll to form - ${err}`));
+		.catch(err => console.error(`Error in: Link tracking - ${err}`));
 }, document.querySelectorAll('a[data-link]'));
 
 export { };

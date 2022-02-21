@@ -36,7 +36,12 @@
 		{
 			"id": "help",
 			"title": "I want to help YOU",
-			"body": "Let me help you on your fitness journey where you will learn all the exercises and build the confidence, reach your goal AND eventually train in a gym on your own. There isn't a greater investement than in YOU and your current / future health.",
+			"paragraphs": [
+				{ "para" : "Let me help you on your fitness journey. I have been where you have been and worked with others in the same position." },
+				{ "para" : "Together we have built tailored programs that suit their goals and managed to build a routine that they can adhere to." },
+				{ "para" : "I will provide you with the tools, education, guidance and confidence to eventually be able to train on your own should you decide to." },
+				{ "para" : "There isn't a greater investement than in YOU and your current / future health." }
+			],
 			"imagePosition": "reverse",
 			"image1": "/images/LisaKimFitSledPush-480w.jpg",
 			"image2": "/images/LisaKimFitSledPush-800w.jpg",
@@ -66,7 +71,7 @@
 		{
 			"id": "contact",
 			"title": "Personal Coaching",
-			"body": "I can help you in person or online. If you want in person coaching you can find me at GSquared Health Clubs, St Annes Square, Manchester City Centre. How does it work?",
+			"body": "I can help you in person OR online. If you want in person coaching you can find me at JD gyms Bury opening Spring 2022. Get on the waiting list! Limited spots available. Here is how it works?",
 			"list": [
 				{
 					"item": "Step 1: Fill out the suitability form."
@@ -78,21 +83,20 @@
 					"item": "Step 3: Fill out the consultation form"
 				},
 				{
-					"item": "Step 4: Come down for a FREE movement assessment"
+					"item": "Step 4: Come down for your movement assessment"
 				},
 				{
-					"item": "Step 5: A tailored program will be written"
+					"item": "Step 5: A personalised program will be written"
 				},
 				{
 					"item": "Step 6: Let's get started!"
 				}
 			],
-			"disclaimer": "* All sessions MUST be taken within a month. Minimum 2 sessions per week. Cancellations must be notified 24hrs prior to session otherwise you will be charged.",
 			"imagePosition": "none",
 			"button": "true",
-			"image1": "/images/jenbacksquat-480w.jpg",
-			"image2": "/images/jenbacksquat-800w.jpg",
-			"imageTitle": "Lisa Kim Fit personal coaching a client in the gym. Jen is performing a backsquat.",
+			"image1": "/images/abbifront-480w.jpg",
+			"image2": "/images/abbifront-800w.jpg",
+			"imageTitle": "Abbie progress pictures",
 			"quote": "You don't have to sacrifice life to be fitter and healthier."
 		}
 	],
@@ -100,7 +104,7 @@
 		{
 			"id": "contact",
 			"title": "Do you want my help?",
-			"body": "I want to help you. I have been where you have been. Whatever you are struggling with I am here to help, I will provide you with the tools, motivation, education and accountability to help you reach your goal. If you are ready to make that change please click the button and fill out the form. I look forward to working with you!"
+			"body": "If YES, that's the first step and I will be here every step of the way. All I ask is that you fill out the short form by clicking the button. This way I can learn about you and build a personalised plan for you. I look forward to coaching you!"
 		}
 	],
 	"newsletter": [

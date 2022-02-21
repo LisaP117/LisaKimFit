@@ -1,5 +1,6 @@
-<div class="overlay newsletter newsletter--pdfguide" data-form-overlay>
-	<section id="pdf" class="section">
+
+<div class="overlay__outer" data-form-overlay>
+	<div class="overlay__inner newsletter--pdfguide">
 		<div class="section__row">
 			<div class="section__column section__column--solo">
 				<h2>Wait! Don't forget to claim your FREE food guide!</h2>
@@ -30,9 +31,9 @@
 								</label>
 								<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email Address" data-input>
 							</div>
-							<div class="newsletter__form__field primary labelsOn">
-								<input data-submit-button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter__form__field__submit primary disabled button">
-							</div>
+						</div>
+						<div class="newsletter__form__field newsletter__form__field--submit">
+							<input data-submit-button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="newsletter__form__field__submit primary disabled button">
 						</div>
 						<div data-form-submitted id="mce-responses" class="newsletter__form__messages row-success">
 							<p data-form-success class="response" id="mce-success-response" style="display: none" aria-hidden="true"></p>
@@ -41,10 +42,10 @@
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f9a8f176416a474cfe80307f2_963e49e33f" tabindex="-1" value=""></div>
 					</form>
 				</div>
-				<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='MMERGE1';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+				<script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script><script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[1]='MMERGE1';ftypes[1]='text';fnames[0]='EMAIL';ftypes[0]='email';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 				<!--End mc_embed_signup-->
 			</div>
 		</div>
-	</section>
-	<button class="button close" data-overlay-close><i class="fas fa-times-circle"></i></button>
+		<button class="button close" data-overlay-close><i class="fas fa-times-circle"></i></button>
+	</div>
 </div>
