@@ -153,7 +153,8 @@ a:focus {
 	text-decoration: none;
 }
 
-p > a {
+p > a,
+p > small > a {
 	display: inline; 
 }
 
